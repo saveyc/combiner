@@ -1,0 +1,216 @@
+2023-11-22 10:19:46,580 ERROR [读取参数] Execute
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 IoTToolkit.ZTO.IoTParameter.OnPropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 130
+   在 Utilities.NotifyPropertyChanged.RaisePropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 26
+   在 Utilities.NotifyPropertyChanged.SetProperty[T](T& field, T newValue, String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 79
+   在 IoTToolkit.ZTO.IoTParameter.set_ConveyorBeltNum(UInt16 value) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 16
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 47
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id)
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx()
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 10:19:46,588 ERROR 读取参数
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 IoTToolkit.ZTO.IoTParameter.OnPropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 130
+   在 Utilities.NotifyPropertyChanged.RaisePropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 26
+   在 Utilities.NotifyPropertyChanged.SetProperty[T](T& field, T newValue, String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 79
+   在 IoTToolkit.ZTO.IoTParameter.set_ConveyorBeltNum(UInt16 value) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 16
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 47
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id)
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx()
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 10:20:50,342 ERROR [读取参数] Execute
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 IoTToolkit.ZTO.IoTParameter.OnPropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 130
+   在 Utilities.NotifyPropertyChanged.RaisePropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 26
+   在 Utilities.NotifyPropertyChanged.SetProperty[T](T& field, T newValue, String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 79
+   在 IoTToolkit.ZTO.IoTParameter.set_ConveyorBeltNum(UInt16 value) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 16
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 47
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id)
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx()
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 10:20:50,342 ERROR 读取参数
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 IoTToolkit.ZTO.IoTParameter.OnPropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 130
+   在 Utilities.NotifyPropertyChanged.RaisePropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 26
+   在 Utilities.NotifyPropertyChanged.SetProperty[T](T& field, T newValue, String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 79
+   在 IoTToolkit.ZTO.IoTParameter.set_ConveyorBeltNum(UInt16 value) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 16
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 47
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id)
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx()
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 10:20:54,110 ERROR [读取参数] Execute
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 IoTToolkit.ZTO.IoTParameter.OnPropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 130
+   在 Utilities.NotifyPropertyChanged.RaisePropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 26
+   在 Utilities.NotifyPropertyChanged.SetProperty[T](T& field, T newValue, String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 79
+   在 IoTToolkit.ZTO.IoTParameter.set_ConveyorBeltNum(UInt16 value) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 16
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 47
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id)
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx()
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 10:20:54,110 ERROR 读取参数
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 IoTToolkit.ZTO.IoTParameter.OnPropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 130
+   在 Utilities.NotifyPropertyChanged.RaisePropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 26
+   在 Utilities.NotifyPropertyChanged.SetProperty[T](T& field, T newValue, String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 79
+   在 IoTToolkit.ZTO.IoTParameter.set_ConveyorBeltNum(UInt16 value) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 16
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 47
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id)
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx()
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 10:22:53,536 ERROR [读取参数] Execute
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 IoTToolkit.ZTO.IoTParameter.OnPropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 130
+   在 Utilities.NotifyPropertyChanged.RaisePropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 26
+   在 Utilities.NotifyPropertyChanged.SetProperty[T](T& field, T newValue, String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 79
+   在 IoTToolkit.ZTO.IoTParameter.set_ConveyorBeltNum(UInt16 value) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 16
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 47
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id)
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx()
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 10:22:53,536 ERROR 读取参数
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 IoTToolkit.ZTO.IoTParameter.OnPropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 130
+   在 Utilities.NotifyPropertyChanged.RaisePropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 26
+   在 Utilities.NotifyPropertyChanged.SetProperty[T](T& field, T newValue, String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 79
+   在 IoTToolkit.ZTO.IoTParameter.set_ConveyorBeltNum(UInt16 value) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 16
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 47
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id)
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx()
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 10:24:49,188 ERROR [读取参数] Execute
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 IoTToolkit.ZTO.IoTParameter.OnPropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 130
+   在 Utilities.NotifyPropertyChanged.RaisePropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 26
+   在 Utilities.NotifyPropertyChanged.SetProperty[T](T& field, T newValue, String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 79
+   在 IoTToolkit.ZTO.IoTParameter.set_ConveyorBeltNum(UInt16 value) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 16
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 47
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id)
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx()
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 10:24:49,188 ERROR 读取参数
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 IoTToolkit.ZTO.IoTParameter.OnPropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 130
+   在 Utilities.NotifyPropertyChanged.RaisePropertyChanged(String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 26
+   在 Utilities.NotifyPropertyChanged.SetProperty[T](T& field, T newValue, String propertyName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Model\NotifyPropertyChanged.cs:行号 79
+   在 IoTToolkit.ZTO.IoTParameter.set_ConveyorBeltNum(UInt16 value) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 16
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 47
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id)
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx()
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 10:49:39,523 ERROR [写入参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.WriteParameterBytes(Byte[] parameter) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 98
+   在 IoTToolkit.ZTO.IoTCommunicator.WriteParameter(IoTParameter parameter) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 44
+   在 IoTToolkit.ZTO.IoTToolkitVM.WriteParameter(IoTParameter parameter) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 173
+   在 IoTToolkit.ZTO.IoTToolkitVM.WriteParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 166
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 10:49:39,533 ERROR 写入参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.WriteParameterBytes(Byte[] parameter) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 98
+   在 IoTToolkit.ZTO.IoTCommunicator.WriteParameter(IoTParameter parameter) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 44
+   在 IoTToolkit.ZTO.IoTToolkitVM.WriteParameter(IoTParameter parameter) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 173
+   在 IoTToolkit.ZTO.IoTToolkitVM.WriteParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 166
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 15:57:20,195 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 15:57:20,204 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 16:40:31,869 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2023-11-22 16:40:31,869 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141

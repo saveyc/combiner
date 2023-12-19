@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>Project/STM3210C-EVAL</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>215</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>765</ColumnWidth1><ColumnWidth2>204</ColumnWidth2><ColumnWidth3>51</ColumnWidth3></Build>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1021</ColumnWidth1></Debug-Log>
+      <TerminalIO/>
+    <Find-in-Files><ColumnWidth0>370</ColumnWidth0><ColumnWidth1>52</ColumnWidth1><ColumnWidth2>634</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-20961-1255</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>Project</ExpandedNode><ExpandedNode>Project/User</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-30100-2721</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-761-2862</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-21791-18367</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\inc\main.h</Filename><XPos>0</XPos><YPos>138</YPos><SelStart>1951</SelStart><SelEnd>1951</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\main.c</Filename><XPos>0</XPos><YPos>404</YPos><SelStart>4095</SelStart><SelEnd>4095</SelEnd></Tab><ActiveTab>1</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\stm32f107.c</Filename><XPos>0</XPos><YPos>429</YPos><SelStart>18724</SelStart><SelEnd>18724</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\stm32f10x_it.c</Filename><XPos>0</XPos><YPos>45</YPos><SelStart>2238</SelStart><SelEnd>2238</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\fun.c</Filename><XPos>0</XPos><YPos>64</YPos><SelStart>1628</SelStart><SelEnd>1628</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\inc\fun.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>869</SelStart><SelEnd>869</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\netconf.c</Filename><XPos>0</XPos><YPos>135</YPos><SelStart>4618</SelStart><SelEnd>4618</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-047f14d8><key>iaridepm.enu1</key></Toolbar-047f14d8></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>602</Bottom><Right>289</Right><x>-2</x><y>-2</y><xscreen>376</xscreen><yscreen>231</yscreen><sizeHorzCX>244792</sizeHorzCX><sizeHorzCY>298836</sizeHorzCY><sizeVertCX>189453</sizeVertCX><sizeVertCY>781371</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>126</Bottom><Right>1538</Right><x>-2</x><y>-2</y><xscreen>1540</xscreen><yscreen>128</yscreen><sizeHorzCX>1002604</sizeHorzCX><sizeHorzCY>165589</sizeHorzCY><sizeVertCX>244792</sizeVertCX><sizeVertCY>298836</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

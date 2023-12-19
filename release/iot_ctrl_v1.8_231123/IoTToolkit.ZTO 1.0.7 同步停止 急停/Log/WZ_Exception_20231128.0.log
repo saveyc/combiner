@@ -1,0 +1,12 @@
+2023-11-28 10:23:48,786 ERROR SystemInfo CpuUsage
+System.InvalidOperationException: 类别不存在。
+   在 System.Diagnostics.PerformanceCounterLib.CounterExists(String machine, String category, String counter)
+   在 System.Diagnostics.PerformanceCounter.InitializeImpl()
+   在 System.Diagnostics.PerformanceCounter..ctor(String categoryName, String counterName, String instanceName, String machineName)
+   在 Utilities.SystemInfo.TryInitCpuUsage(String categoryName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Tools\SystemInfo.cs:行号 126
+2023-11-28 10:29:50,825 ERROR SystemInfo CpuUsage
+System.InvalidOperationException: 类别不存在。
+   在 System.Diagnostics.PerformanceCounterLib.CounterExists(String machine, String category, String counter)
+   在 System.Diagnostics.PerformanceCounter.InitializeImpl()
+   在 System.Diagnostics.PerformanceCounter..ctor(String categoryName, String counterName, String instanceName, String machineName)
+   在 Utilities.SystemInfo.TryInitCpuUsage(String categoryName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Tools\SystemInfo.cs:行号 126

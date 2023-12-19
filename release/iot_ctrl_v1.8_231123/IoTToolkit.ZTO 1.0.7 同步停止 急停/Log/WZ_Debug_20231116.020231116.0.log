@@ -1,0 +1,68 @@
+2023-11-16 10:57:03,778 DEBUG ====================Utility Initializing====================
+2023-11-16 10:57:04,022 DEBUG [Performance] Start logging
+2023-11-16 10:57:04,045 DEBUG [AssemblyVersion]
+HandyControl, Version=3.2.0.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, InDebug=False
+IoTToolkit.Core, Version=1.0.10.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+IoTToolkit.ZTO, Version=1.0.7.1, Culture=neutral, PublicKeyToken=null, InDebug=True
+log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, InDebug=False
+ScadaCommunicator, Version=1.6.23.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+Utilities, Version=2.5.17.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+Utilities.Log, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+2023-11-16 10:57:04,046 DEBUG FrameworkVersion = 4.8
+2023-11-16 10:57:04,051 DEBUG [SynapticsVirusDetector]检查了42个文件
+2023-11-16 10:57:04,051 DEBUG [SynapticsVirusDetector]检测耗时10.9904ms
+2023-11-16 10:57:05,125 DEBUG [SystemInfo] CPU=12th Gen Intel(R) Core(TM) i7-12700H, ProcessorCount=20, RAM=15.69
+2023-11-16 10:57:05,125 DEBUG [Performance]	CPU=0.00%	RAM=10.27used/15.69G	Page=17.37used/23.44G	C=179.94used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=26	RAM=160.71M|202.38M	PT=0.11|0.11|1.55s	CPU=0.00%|0.00%	Responding=True
+2023-11-16 10:57:06,631 DEBUG ====================Utility Initializing====================
+2023-11-16 10:57:06,869 DEBUG [Performance] Start logging
+2023-11-16 10:57:06,893 DEBUG [AssemblyVersion]
+HandyControl, Version=3.2.0.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, InDebug=False
+IoTToolkit.Core, Version=1.0.10.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+IoTToolkit.ZTO, Version=1.0.7.1, Culture=neutral, PublicKeyToken=null, InDebug=True
+log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, InDebug=False
+ScadaCommunicator, Version=1.6.23.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+Utilities, Version=2.5.17.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+Utilities.Log, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+2023-11-16 10:57:06,893 DEBUG FrameworkVersion = 4.8
+2023-11-16 10:57:06,899 DEBUG [SynapticsVirusDetector]检查了42个文件
+2023-11-16 10:57:06,899 DEBUG [SynapticsVirusDetector]检测耗时11.4921ms
+2023-11-16 10:57:07,970 DEBUG [SystemInfo] CPU=12th Gen Intel(R) Core(TM) i7-12700H, ProcessorCount=20, RAM=15.69
+2023-11-16 10:57:07,975 DEBUG [Performance]	CPU=0.00%	RAM=10.54used/15.69G	Page=17.58used/23.44G	C=179.94used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=28	RAM=227.84M|275.38M	PT=0.27|0.17|1.63s	CPU=NaN|NaN	Responding=True
+2023-11-16 10:57:36,879 DEBUG [Performance]	CPU=1.13%	RAM=10.60used/15.69G	Page=17.36used/23.44G	C=179.98used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=21	RAM=226.41M|267.50M	PT=0.42|0.19|30.53s	CPU=0.04%|0.00%	Responding=True
+2023-11-16 10:58:06,901 DEBUG [Performance]	CPU=0.46%	RAM=10.47used/15.69G	Page=17.11used/23.44G	C=179.98used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=19	RAM=235.68M|274.38M	PT=0.64|0.38|60.55s	CPU=0.05%|0.04%	Responding=True
+2023-11-16 10:58:36,903 DEBUG [Performance]	CPU=0.26%	RAM=10.47used/15.69G	Page=17.10used/23.44G	C=179.98used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=17	RAM=236.95M|274.95M	PT=0.77|0.47|90.55s	CPU=0.03%|0.02%	Responding=True
+2023-11-16 10:59:06,910 DEBUG [Performance]	CPU=0.56%	RAM=10.47used/15.69G	Page=17.10used/23.44G	C=179.99used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=17	RAM=236.95M|274.94M	PT=0.77|0.47|120.56s	CPU=0.00%|0.00%	Responding=True
+2023-11-16 10:59:36,918 DEBUG [Performance]	CPU=0.25%	RAM=10.48used/15.69G	Page=17.10used/23.44G	C=179.99used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=14	RAM=240.18M|277.91M	PT=0.80|0.50|150.56s	CPU=0.01%|0.01%	Responding=True
+2023-11-16 11:00:06,931 DEBUG [Performance]	CPU=1.67%	RAM=10.76used/15.69G	Page=17.32used/23.44G	C=179.99used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=16	RAM=238.03M|275.82M	PT=0.81|0.50|180.58s	CPU=0.00%|0.00%	Responding=True
+2023-11-16 11:00:36,941 DEBUG [Performance]	CPU=0.46%	RAM=10.79used/15.69G	Page=17.35used/23.44G	C=179.99used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=16	RAM=238.03M|275.81M	PT=0.81|0.50|210.59s	CPU=0.00%|0.00%	Responding=True
+2023-11-16 11:01:06,942 DEBUG [Performance]	CPU=0.27%	RAM=10.75used/15.69G	Page=17.31used/23.44G	C=179.99used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=16	RAM=238.04M|275.81M	PT=0.83|0.50|240.59s	CPU=0.00%|0.00%	Responding=True
+2023-11-16 11:01:36,943 DEBUG [Performance]	CPU=0.30%	RAM=10.79used/15.69G	Page=17.36used/23.44G	C=179.99used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=15	RAM=239.00M|276.77M	PT=0.83|0.50|270.59s	CPU=0.00%|0.00%	Responding=True
+2023-11-16 11:02:06,958 DEBUG [Performance]	CPU=0.59%	RAM=10.80used/15.69G	Page=17.35used/23.44G	C=179.99used/235.44G	D=41.35used/131.39G	F=41.87used/300.00G	G=48.26used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=18	RAM=239.22M|277.06M	PT=0.83|0.50|300.61s	CPU=0.00%|0.00%	Responding=True
+2023-11-16 19:45:30,725 DEBUG ====================Utility Initializing====================
+2023-11-16 19:45:30,959 DEBUG [Performance] Start logging
+2023-11-16 19:45:30,984 DEBUG [AssemblyVersion]
+HandyControl, Version=3.2.0.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, InDebug=False
+IoTToolkit.Core, Version=1.0.10.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+IoTToolkit.ZTO, Version=1.0.8.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, InDebug=False
+ScadaCommunicator, Version=1.6.23.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+Utilities, Version=2.5.17.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+Utilities.Log, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+2023-11-16 19:45:30,984 DEBUG FrameworkVersion = 4.8
+2023-11-16 19:45:30,995 DEBUG [SynapticsVirusDetector]检查了42个文件
+2023-11-16 19:45:30,995 DEBUG [SynapticsVirusDetector]检测耗时17.9997ms
+2023-11-16 19:45:32,066 DEBUG [SystemInfo] CPU=12th Gen Intel(R) Core(TM) i7-12700H, ProcessorCount=20, RAM=15.69
+2023-11-16 19:45:32,072 DEBUG [Performance]	CPU=0.00%	RAM=10.46used/15.69G	Page=17.44used/23.44G	C=179.88used/235.44G	D=41.58used/131.39G	F=41.90used/300.00G	G=50.12used/200.00G	H=23.64used/250.00G
+Name=IoTToolkit.ZTO	Trd=25	RAM=158.37M|204.69M	PT=0.11|0.11|3.24s	CPU=0.00%|0.00%	Responding=True

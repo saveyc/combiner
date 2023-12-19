@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1021</ColumnWidth1></Debug-Log>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>765</ColumnWidth1><ColumnWidth2>204</ColumnWidth2><ColumnWidth3>51</ColumnWidth3></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>200</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        <PreferedWindows>
+          
+          
+          
+          
+        <Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows>
+        
+        
+        
+      <MixedMode>1</MixedMode><CodeCovShow>1</CodeCovShow><InstrProfShow>1</InstrProfShow></Disassembly>
+    <Watch><Format><struct_types><Fmt><Key>struct ip_addr-addr</Key><Value>4</Value></Fmt><Fmt><Key>struct tcp_client_table-connect_dely</Key><Value>3</Value></Fmt></struct_types><watch_formats><Fmt><Key>{W}Watch-1:sec_flag</Key><Value>4</Value></Fmt></watch_formats></Format><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><Column0>151</Column0><Column1>153</Column1><Column2>100</Column2><Column3>100</Column3></Watch><Memory><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><FindDirection>1</FindDirection><FindAsHex>0</FindAsHex></Memory><Locals><Column0>153</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Locals><Find-in-Files><ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-2100-3041</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-1577-3051</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-20344-32174</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-12848-3045</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>Project</ExpandedNode><ExpandedNode>Project/User</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1><Wnd2><Tabs><Tab><Identity>TabID-13770-13689</Identity><TabName>Watch</TabName><Factory>Watch</Factory><Session><Expressions><Expression><Expression>wcs2CarCmdData</Expression></Expression><Expression><Expression>zongxian_send_buff</Expression></Expression><Expression><Expression>sec_flag</Expression></Expression><Expression><Expression>tcp_client_list</Expression></Expression><Expression><Expression>zongxian_recv_buff</Expression></Expression><Expression><Expression>wcs2CarParaData</Expression></Expression><Expression><Expression>moto_para</Expression></Expression><Expression><Expression>tcphdr</Expression></Expression><Expression><Expression>zongxian_recv_count</Expression></Expression><Expression><Expression>curDataCnt</Expression></Expression><Expression><Expression>moto_send_buff</Expression></Expression><Expression><Expression>uart4_send_buff</Expression></Expression><Expression><Expression>timExtiHandler</Expression></Expression><Expression><Expression>timUpdates</Expression></Expression><Expression><Expression>fwHz</Expression></Expression><Expression><Expression>fwbV</Expression></Expression><Expression><Expression>uart1_send_buff[23]</Expression></Expression><Expression><Expression>uart1_send_buff</Expression></Expression><Expression><Expression>wcs2LoadSystemData</Expression></Expression><Expression><Expression>spi_recv_buff</Expression></Expression><Expression><Expression>uart4_recv_buff</Expression></Expression><Expression><Expression>uart4_recv_count</Expression></Expression><Expression><Expression>io_state_buff</Expression></Expression><Expression><Expression>io_slave_num</Expression></Expression></Expressions><TabId>1</TabId><Column0>151</Column0><Column1>153</Column1><Column2>100</Column2><Column3>100</Column3></Session></Tab><Tab><Identity>TabID-19440-31800</Identity><TabName>Locals</TabName><Factory>Locals</Factory><Session><Column0>153</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd2></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\inc\main.h</Filename><XPos>0</XPos><YPos>119</YPos><SelStart>6084</SelStart><SelEnd>6093</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\main.c</Filename><XPos>0</XPos><YPos>89</YPos><SelStart>2922</SelStart><SelEnd>2922</SelEnd></Tab><ActiveTab>1</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\stm32f107.c</Filename><XPos>0</XPos><YPos>468</YPos><SelStart>20636</SelStart><SelEnd>20636</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\stm32f10x_it.c</Filename><XPos>0</XPos><YPos>45</YPos><SelStart>2238</SelStart><SelEnd>2238</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\usart.c</Filename><XPos>0</XPos><YPos>264</YPos><SelStart>7441</SelStart><SelEnd>7441</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\fun.c</Filename><XPos>0</XPos><YPos>49</YPos><SelStart>1257</SelStart><SelEnd>1257</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\inc\fun.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>475</SelStart><SelEnd>475</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\TCPclient.c</Filename><XPos>0</XPos><YPos>530</YPos><SelStart>17826</SelStart><SelEnd>17826</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\Libraries\STM32_ETH_Driver\src\stm32_eth.c</Filename><XPos>0</XPos><YPos>723</YPos><SelStart>32955</SelStart><SelEnd>32955</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00e3eca0><key>iaridepm.enu1</key></Toolbar-00e3eca0></Sizes></Row0><Row1><Sizes><Toolbar-07862f48><key>debuggergui.enu1</key></Toolbar-07862f48></Sizes></Row1><Row2><Sizes><Toolbar-07863ee8><key>armjlink.enu1</key></Toolbar-07863ee8></Sizes></Row2></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>427</Bottom><Right>274</Right><x>-2</x><y>-2</y><xscreen>190</xscreen><yscreen>168</yscreen><sizeHorzCX>139092</sizeHorzCX><sizeHorzCY>244898</sizeHorzCY><sizeVertCX>202050</sizeVertCX><sizeVertCY>625364</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>427</Bottom><Right>353</Right><x>-2</x><y>-2</y><xscreen>190</xscreen><yscreen>168</yscreen><sizeHorzCX>139092</sizeHorzCX><sizeHorzCY>244898</sizeHorzCY><sizeVertCX>259883</sizeVertCX><sizeVertCY>625364</sizeVertCY></Rect></Wnd2></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>166</Bottom><Right>1368</Right><x>-2</x><y>-2</y><xscreen>1370</xscreen><yscreen>168</yscreen><sizeHorzCX>1002928</sizeHorzCX><sizeHorzCY>244898</sizeHorzCY><sizeVertCX>139092</sizeVertCX><sizeVertCY>244898</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+
