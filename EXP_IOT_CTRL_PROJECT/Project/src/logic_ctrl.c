@@ -1372,7 +1372,7 @@ u8 logicStockgetCurPhotoState(u8 index, u8 type)
             break;
         }
     }
-    
+    return j;
 }
 
 // ÍÍ°ü¹ý³Ì
