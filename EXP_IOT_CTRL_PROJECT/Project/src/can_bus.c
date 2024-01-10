@@ -146,7 +146,7 @@ void vcanbus_recv_upstreamstop(void)
     comm_node_new.rw_flag = 1;
     comm_node_new.inverter_no = user_paras_local.Belt_Number;
     comm_node_new.speed_gear = 0;
-    comm_node_new.comm_interval = user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Stop_Delay_Time;
+    comm_node_new.comm_interval = user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Link_Stop_Time;
     comm_node_new.comm_retry = 3;
     AddUartSendData2Queue(comm_node_new);
     index = user_paras_local.Belt_Number - 1;
@@ -166,7 +166,7 @@ void vcanbus_recv_upstreamstop(void)
             comm_node_new.rw_flag = 1;
             comm_node_new.inverter_no = j;
             comm_node_new.speed_gear = 0;
-            comm_node_new.comm_interval = user_paras_local.belt_para[j - 1].Stop_Delay_Time;
+            comm_node_new.comm_interval = user_paras_local.belt_para[j - 1].Link_Stop_Time;
             comm_node_new.comm_retry = 3;
             AddUartSendData2Queue(comm_node_new);
 

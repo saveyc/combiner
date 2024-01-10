@@ -7,7 +7,8 @@
 #define  B_EMERGENCYRESET_IN_STATE     IN1_3_STATE   //急停复位信号
 #define  B_DOWN_STOCK_IN_STATE         IN1_4_STATE   //下游屯包光电（主要对接合流机屯包段）
 #define  B_UP_STOCK_IN_STATE           IN1_5_STATE   //上游屯包光电（主要对接上游非IOT控制的屯包段）
-#define  B_COMBINER_IN_STATE           IN1_6_STATE   //合流机允许输入信号
+
+#define  B_COMBINER_IN_STATE           IN2_6_STATE   //合流机允许输入信号
 
 
 #define  B_PHOTO_1_IN_STATE    IN2_0_STATE   //光电1输入
@@ -56,11 +57,11 @@ typedef struct {
     u16          blocktrig_flag;       //触发过 用在堵包判断中
 }sButton_Info;
 
-#define USER_PARA_DATA_LEN    113
+#define USER_PARA_DATA_LEN    143
 
 typedef struct {
     u16 Func_Select_Switch;    //功能选择开关(bit0:是否启用自动调速;bit1:前后联动功能;bit2:堵包检测功能;bit3:积放功能(使用光电) bit4(有外部准入信号)) bit5 上游同步停止
-                               //bit6:屯包  bit7:与下游同步屯包  bit8:控制合流机屯包 
+                               //bit6:屯包  bit7:与下游同步屯包  bit8:控制合流机屯包 bit9 暂停 bit10 共用设备
     u16 Gear_1_Speed_Freq;     //第一档速度/频率(速度整型表示浮点数,如:12表示1.2m/s)(频率值整型表示浮点数,如:1234表示12.34hz)
     u16 Gear_2_Speed_Freq;     //第二档速度/频率
     u16 Gear_3_Speed_Freq;     //第三档速度/频率
@@ -71,6 +72,10 @@ typedef struct {
     u16 Stop_Delay_Time;       //停止延时时间(ms)
     u16 Block_Check_Time;      //堵包检测时间(s)
     u16 Sleep_Check_Time;      //休眠检测时间(s)
+    // add 24/01/04
+    u16 Stop_Clear_Time;       // 停机清包时间
+    u16 Link_Start_Time;       // 联动启动时间
+    u16 Link_Stop_Time;        // 联动停止时间
 }BELT_PARAS_T;
 
 typedef struct {
@@ -204,5 +209,6 @@ void logic_cycle_decrease(void);
 
 // 屯包过程
 void logicStockProcess(void);
+void logicStockProcessTwo(void);
 
 #endif

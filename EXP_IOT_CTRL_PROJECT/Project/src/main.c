@@ -371,7 +371,7 @@ void main_upload_run_state(void)
                         comm_node_new.rw_flag = 1;
                         comm_node_new.inverter_no = user_paras_local.Belt_Number;
                         comm_node_new.speed_gear = g_speed_gear_status;
-                        comm_node_new.comm_interval = user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Start_Delay_Time;
+                        comm_node_new.comm_interval = user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Link_Start_Time;
                         comm_node_new.comm_retry = 3;
                         AddUartSendData2Queue(comm_node_new);
                     }
@@ -388,7 +388,7 @@ void main_upload_run_state(void)
                             comm_node_new.rw_flag = 1;
                             comm_node_new.inverter_no = i;
                             comm_node_new.speed_gear = g_speed_gear_status;
-                            comm_node_new.comm_interval = user_paras_local.belt_para[i - 1].Start_Delay_Time;
+                            comm_node_new.comm_interval = user_paras_local.belt_para[i - 1].Link_Start_Time;
                             comm_node_new.comm_retry = 3;
                             AddUartSendData2Queue(comm_node_new);
                         }
@@ -398,8 +398,6 @@ void main_upload_run_state(void)
             }
         }
     }
-
-
 }
 
 void main_msone_process(void)
@@ -431,12 +429,11 @@ void main_msone_process(void)
         logic_cycle_decrease();
 
         //屯包逻辑
-        logicStockProcess();
-
+//        logicStockProcess();
+        logicStockProcessTwo();
         //串口逻辑时间计算
         uart_recv_timeout();
         //输入状态查询
-
         InputScanProc();
 
     }

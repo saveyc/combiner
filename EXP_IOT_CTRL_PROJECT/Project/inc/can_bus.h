@@ -6,16 +6,16 @@
 
 enum
 {
-    CAN_FUNC_ID_PARA_DATA = 0x1,  //用户参数命令(读写)
-    CAN_FUNC_ID_START_CMD = 0x2,  //启动停止命令(启动命令包含高低速)
-    CAN_FUNC_ID_MODULE_STATUS = 0x3,  //模块实时状态信息(周期指令)
-    CAN_FUNC_ID_RESET_CMD = 0x4,  //复位命令
-    CAN_FUNC_ID_FUNC_SELECT_CMD = 0x5,  //堵包使能命令
-    CAN_FUNC_ID_READ_MODULE_STATUS = 0x6, //读取从模块状态信息
+    CAN_FUNC_ID_PARA_DATA = 0x1,             //用户参数命令(读写)
+    CAN_FUNC_ID_START_CMD = 0x2,             //启动停止命令(启动命令包含高低速)
+    CAN_FUNC_ID_MODULE_STATUS = 0x3,         //模块实时状态信息(周期指令)
+    CAN_FUNC_ID_RESET_CMD = 0x4,             //复位命令
+    CAN_FUNC_ID_FUNC_SELECT_CMD = 0x5,       //堵包使能命令
+    CAN_FUNC_ID_READ_MODULE_STATUS = 0x6,    //读取从模块状态信息
     CAN_FUNC_ID_EMERGENCY_STOP_STATUS = 0x7, //急停信号
     CAN_FUNC_ID_UPSTREAM_STOP_CMD = 0x8,     //上游停止信号
     CAN_FUNC_ID_BOARDCAST_CMD = 0x9,         //广播命令集
-    CAN_FUNC_ID_BOOT_MODE     = 0xF           // boot 模式
+    CAN_FUNC_ID_BOOT_MODE     = 0xF          // boot 模式
 };
 
 // 一帧can可以发送接收完毕的命令

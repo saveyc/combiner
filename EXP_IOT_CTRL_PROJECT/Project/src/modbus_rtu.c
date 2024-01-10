@@ -374,8 +374,43 @@ void comm_send_rw_comand()
                 }
             }
         }
-        
 
+        if (comm_node.inverter_no == 1)
+        {
+            if (g_speed_set_sta == 1)
+                B_RUN_1_OUT_(Bit_SET);
+            else
+                B_RUN_1_OUT_(Bit_RESET);
+        }
+        else if (comm_node.inverter_no == 2)
+        {
+            if (g_speed_set_sta == 1)
+                B_RUN_2_OUT_(Bit_SET);
+            else
+                B_RUN_2_OUT_(Bit_RESET);
+        }
+        else if (comm_node.inverter_no == 3)
+        {
+            if (g_speed_set_sta == 1)
+                B_RUN_3_OUT_(Bit_SET);
+            else
+                B_RUN_3_OUT_(Bit_RESET);
+        }
+        else if (comm_node.inverter_no == 4)
+        {
+            if (g_speed_set_sta == 1)
+                B_RUN_4_OUT_(Bit_SET);
+            else
+                B_RUN_4_OUT_(Bit_RESET);
+        }
+        else if (comm_node.inverter_no == 5)
+        {
+            if (g_speed_set_sta == 1)
+                B_RUN_5_OUT_(Bit_SET);
+            else
+                B_RUN_5_OUT_(Bit_RESET);
+        }
+        
     }
     else if(comm_node.rw_flag == 2)//写复位
     {
@@ -426,7 +461,7 @@ u8 comm_recv_rw_comand(u8* buf,u16 len)
             }
         }
         
-        inverter_status_buffer[comm_node.inverter_no-1].fault_code &= (0x1<<1);//保留堵包故障位
+        inverter_status_buffer[comm_node.inverter_no-1].fault_code &= (0x22);//保留堵包故障位  清掉其他的报警 急停状态不应该清掉
         inverter_status_buffer[comm_node.inverter_no-1].fault_code |= (data[0]&0xFF00);//变频器故障码
         inverter_status_buffer[comm_node.inverter_no-1].fault_code |= (run_status_new<<4);//运行状态
         inverter_status_buffer[comm_node.inverter_no-1].fault_code |= ((data[1]&0x1)<<3);//编码器状态
@@ -499,26 +534,9 @@ u8 comm_recv_rw_comand(u8* buf,u16 len)
 void Modbus_RTU_Comm_Process(void)
 {
     COMM_NODE_T* comm_node_tmp;
-    COMM_NODE_T  comm_node_new;
     u16 i = 0;
     u16 flag = 0;
     
-    // 串口未占用 且队列为空时
-    if(comm_busy_flag == 0 && IsUartSendQueueFree()){
-    
-        //polling_num++;
-        //if(polling_num > user_paras_local.Belt_Number)
-        //{
-        //    polling_num = 1;
-        //}
-        //comm_node_new.rw_flag = 0;
-        //comm_node_new.inverter_no = polling_num;
-        //comm_node_new.comm_interval = 150;
-        //comm_node_new.comm_retry = 0;
-        //AddUartSendData2Queue(comm_node_new);
-    }
-
-
     if(comm_busy_flag == 0)
     {
         comm_node_tmp = GetUartSendDataFromQueue();
@@ -530,7 +548,7 @@ void Modbus_RTU_Comm_Process(void)
         {
             comm_node = *comm_node_tmp;
 
-            for (i = 0; i > user_paras_local.Belt_Number; i++)
+            for (i = 0; i < user_paras_local.Belt_Number; i++)
             {
                 if ((((user_paras_local.belt_para[i].Func_Select_Switch >> 6) & 0x1) == 1) ||
                     (((user_paras_local.belt_para[i].Func_Select_Switch >> 7) & 0x1) == 1) ||
@@ -547,58 +565,7 @@ void Modbus_RTU_Comm_Process(void)
                     logic_upload_stopStatus[comm_node.inverter_no - 1] = STOPSTATUS_MAX;
                 }
             }
-            //if (comm_node.comm_interval == 0) {
-            //    comm_node.comm_interval = 15;
-            //}
-
-            // 要考虑 变频器的数量 此规则不通用
-            // 5停止状态 4不启动
-            //if ((comm_node.inverter_no == 4) && (comm_node.speed_gear != 0) && (comm_node.rw_flag == 1)) {
-            //    if (((inverter_status_buffer[4].fault_code >> 4) & 0x1) == 0) {
-            //        return;
-            //    }
-            //}
-            //// 保持一段时间 才给4发启动
-            //if ((upload_600ms != 0) && (comm_node.inverter_no == 4) && (comm_node.speed_gear != 0) && (comm_node.rw_flag == 1))
-            //{
-            //    return;
-            //}
-
-            //// 4停止状态 3不启动
-            //if ((comm_node.inverter_no == 3) && (comm_node.speed_gear != 0) && (comm_node.rw_flag == 1)) {
-            //    if (((inverter_status_buffer[3].fault_code >> 4) & 0x1) == 0) {
-            //        return;
-            //    }
-            //}
-            //// 保持一段时间 才给3发启动
-            //if ((upload_600ms_3 != 0) && (comm_node.inverter_no == 3) && (comm_node.speed_gear != 0) && (comm_node.rw_flag == 1))
-            //{
-            //    return;
-            //}
-
-            //// 3停止 2不启动
-            //if ((comm_node.inverter_no == 2) && (comm_node.speed_gear != 0) && (comm_node.rw_flag == 1)) {
-            //    if (((inverter_status_buffer[2].fault_code >> 4) & 0x1) == 0) {
-            //        return;
-            //    }
-            //}
-            //// 间隔一段时间 才允许2启动
-            //if ((upload_600ms_2 != 0) && (comm_node.inverter_no == 2) && (comm_node.speed_gear != 0) && (comm_node.rw_flag == 1))
-            //{
-            //    return;
-            //}
-            //// 2停止 1不启动
-            //if ((comm_node.inverter_no == 1) && (comm_node.speed_gear != 0) && (comm_node.rw_flag == 1)) {
-            //    if (((inverter_status_buffer[1].fault_code >> 4) & 0x1) == 0) {
-            //        return;
-            //    }
-            //}
-            //// 间隔一段时间 才允许1启动
-            //if ((upload_600ms_1 != 0) && (comm_node.inverter_no == 1) && (comm_node.speed_gear != 0) && (comm_node.rw_flag == 1))
-            //{
-            //    return;
-            //}
-
+            
             comm_node.comm_interval = 2;
 
             logic_upload_lastRunStatus[comm_node.inverter_no - 1] = comm_node.speed_gear;

@@ -138,8 +138,8 @@ void Delay(uint32_t nCount);
 #define  UserAppEnFlagAddress      0x800F800
 
 #define UART1_BUFF_SIZE  50
-extern u8  uart1_send_buff[UART1_BUFF_SIZE];
-extern u8  uart1_recv_buff[UART1_BUFF_SIZE];
+extern u8  uart1_send_buff[];
+extern u8  uart1_recv_buff[];
 extern u16 uart1_send_count;
 extern u16 uart1_recv_count;
 extern u8  uart1_commu_state;
