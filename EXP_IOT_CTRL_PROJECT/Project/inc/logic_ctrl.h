@@ -42,6 +42,9 @@
 #define  BELT_NUMMAX        10
 #define  STOPSTATUS_MAX     2305
 
+#define  ONLY_IO            0
+#define  STACK_TYPE         1
+
 typedef struct {
     u8  input_state;
     u8  input_middle_state;

@@ -1,0 +1,5 @@
+2024-01-18 16:14:33,587 ERROR 'CommunicationFailed' [IoTCommunicator] 10004
+System.Net.Sockets.SocketException (0x80004005): 一个封锁操作被对 WSACancelBlockingCall 的调用中断。
+   在 System.Net.Sockets.Socket.ReceiveFrom(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, EndPoint& remoteEP)
+   在 System.Net.Sockets.Socket.ReceiveFrom(Byte[] buffer, EndPoint& remoteEP)
+   在 Utilities.Network.UDPClient.ReceiveMsg() 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Network\UDPClient.cs:行号 121

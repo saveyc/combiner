@@ -1,0 +1,20 @@
+2024-01-10 10:45:35,921 DEBUG ====================Utility Initializing====================
+2024-01-10 10:45:36,296 DEBUG [Performance] Start logging
+2024-01-10 10:45:36,312 DEBUG [AssemblyVersion]
+HandyControl, Version=3.2.0.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, InDebug=False
+IoTToolkit.Core, Version=1.0.12.1, Culture=neutral, PublicKeyToken=null, InDebug=True
+IoTToolkit.ZTO, Version=1.0.10.1, Culture=neutral, PublicKeyToken=null, InDebug=True
+log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, InDebug=False
+ScadaCommunicator, Version=1.6.24.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+Utilities, Version=2.5.22.1, Culture=neutral, PublicKeyToken=null, InDebug=True
+Utilities.Log, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null, InDebug=True
+2024-01-10 10:45:36,314 DEBUG FrameworkVersion = 4.8
+2024-01-10 10:45:36,456 DEBUG [SynapticsVirusDetector]检查了49个文件
+2024-01-10 10:45:36,456 DEBUG [SynapticsVirusDetector]检测耗时152.7667ms
+2024-01-10 10:45:37,731 DEBUG [SystemInfo] CPU=12th Gen Intel(R) Core(TM) i7-12700H, ProcessorCount=20, RAM=15.69
+2024-01-10 10:45:37,741 DEBUG [Performance]	CPU=0.00%	RAM=10.14used/15.69G	Page=15.73used/25.19G	C=166.02used/235.44G	D=40.85used/131.39G	F=42.86used/300.00G	G=44.96used/200.00G	H=18.28used/250.00G	I=22.54used/50.00G
+Name=IoTToolkit.ZTO	Trd=25	RAM=225.01M|254.10M	PT=0.14|0.11|3.06s	CPU=0.00%|0.00%	Responding=True
+2024-01-10 10:46:06,312 DEBUG [Performance]	CPU=3.61%	RAM=10.13used/15.69G	Page=15.73used/25.19G	C=166.02used/235.44G	D=40.85used/131.39G	F=42.86used/300.00G	G=44.96used/200.00G	H=18.28used/250.00G	I=22.54used/50.00G
+Name=IoTToolkit.ZTO	Trd=21	RAM=225.68M|254.66M	PT=0.23|0.19|31.64s	CPU=0.02%|0.02%	Responding=True
+2024-01-10 10:46:36,316 DEBUG [Performance]	CPU=4.43%	RAM=10.05used/15.69G	Page=15.63used/25.19G	C=166.02used/235.44G	D=40.85used/131.39G	F=42.86used/300.00G	G=44.96used/200.00G	H=18.28used/250.00G	I=22.54used/50.00G
+Name=IoTToolkit.ZTO	Trd=18	RAM=226.60M|255.47M	PT=0.25|0.20|61.64s	CPU=0.00%|0.00%	Responding=True

@@ -128,7 +128,11 @@ void uart1_send(void)
     UART1_RX_485;
     uart1_commu_state = RECV_DATA;
     uart1_recv_count = 0;
+#if ONLY_IO
+    uart1_tmr = 2;
+#else
     uart1_tmr = 35;
+#endif
 }
 
 void Modbus_RTU_Write_Single_Reg_Cmd(u16 reg_addr,u16 data)
@@ -572,7 +576,12 @@ void Modbus_RTU_Comm_Process(void)
 
             comm_busy_flag = 1;
             uart1_commu_state = SEND_READY;
+#if ONLY_IO
+            comm_node.comm_retry = 0;
+#else
             comm_node.comm_retry = 2;
+#endif
+
         }
     }
     else
