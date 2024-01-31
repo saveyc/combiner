@@ -1294,7 +1294,7 @@ void read_user_paras(void)
     }
     user_paras_local.Station_No = local_station;
     user_paras_local.Version_No_L = 0x0008;
-    user_paras_local.Version_No_H = 0x1000;
+    user_paras_local.Version_No_H = 0x0100;
     //参数有效性校验
     if(user_paras_local.Up_Stream_No > 255)
     {
@@ -1342,6 +1342,7 @@ void logic_upstream_io_allow_output(void)
       return;
     }
 
+#if STACK_IO
     for (i = 0; i < user_paras_local.Belt_Number; i++)
     {
         if ((((user_paras_local.belt_para[i].Func_Select_Switch >> 6) & 0x1) == 1) ||
@@ -1373,6 +1374,7 @@ void logic_upstream_io_allow_output(void)
             B_STREAM_OUT_(Bit_RESET);
         }
     }
+#endif
 }
 
 // add 23/12/12 屯包逻辑
@@ -2365,4 +2367,525 @@ void logicStockProcessTwo(void)
     }
 
     
+}
+
+
+// 屯包过程   其中的一种方式 一段一段屯包
+void logicStockProcessThree(void)
+{
+
+    u16 i = 0;
+    u16 j = 0;
+    u16 k = 0;
+
+
+    COMM_NODE_T  comm_node_new;
+
+    //最上游屯包起始光电状态
+    u16  photoUpStat = 0;
+    //最上游屯包段皮带索引
+    static u16  ModUpIndex = 0;
+
+    //反控合流机停止倒计时
+    static u16 combSwitchDown = 0;
+    //反控合流机启动倒计时
+    static u16 combSwitchUp = 0;
+
+    //临时的光电状态
+    u16 photoTmp = 0;
+    // 当前屯包段光电状态
+    u16 photoCurStat = 0;
+    // 当前屯包段索引
+    static u16 photoCurIndex = 0;
+    // 上一次判断屯包段索引
+    static u16 photolastIndex = 0xFFFF;
+    // 上一次的屯包状态  0 停止屯包  1 屯过包
+    static u16 stockRunStat = INVALUE;
+
+
+    // 屯包段最多5段
+    if (user_paras_local.Belt_Number == 0) {
+        return;
+    }
+
+    if (user_paras_local.Belt_Number > 5) {
+        return;
+    }
+
+    if (bCombinerInInfo.input_info.input_state == 1) {
+        B_STREAM_OUT_(Bit_SET);
+    }
+    else {
+        if (stockFullFlag == 0) {
+            B_STREAM_OUT_(Bit_SET);
+        }
+        else {
+            B_STREAM_OUT_(Bit_RESET);
+        }
+    }    
+
+    if (g_speed_gear_status == 0) {
+
+        if (combSwitchDown == 0) {
+            combSwitchDown = 1;
+        }
+        combSwitchUp = 0;
+        stockRunStat = INVALUE;
+        photoCurIndex = ModUpIndex;
+        photolastIndex = 0xFFFF;
+
+        //停止控制合流机 输出低电平
+        if (combSwitchDown > 0) {
+            combSwitchDown--;
+            if (combSwitchDown == 0) {
+                if (((user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Func_Select_Switch >> 8) & 0x1) == 1) {
+                    B_COMBINER_OUT(Bit_RESET);
+                }
+            }
+        }
+
+        //启动合流机 输出高电平
+        if (combSwitchUp > 0) {
+            combSwitchUp--;
+            if (combSwitchUp == 0) {
+                if (((user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Func_Select_Switch >> 8) & 0x1) == 1) {
+                    B_COMBINER_OUT(Bit_SET);
+                }
+            }
+        }
+        return;
+    }
+
+    //判断最上游屯包段 找到屯包起始光电
+    for (i = 0; i < user_paras_local.Belt_Number; i++)
+    {
+        if ((((user_paras_local.belt_para[i].Func_Select_Switch >> 6) & 0x1) == 1) ||
+            (((user_paras_local.belt_para[i].Func_Select_Switch >> 7) & 0x1) == 1))
+        {
+            switch (i) {
+            case 0:
+                ModUpIndex = 0;
+                photoUpStat = bUpStockInfo.input_info.input_state;
+                break;
+            case 1:
+                ModUpIndex = 1;
+                photoUpStat = bPhoto1Info.input_info.input_state;
+                break;
+            case 2:
+                ModUpIndex = 2;
+                photoUpStat = bPhoto2Info.input_info.input_state;
+                break;
+            case 3:
+                ModUpIndex = 3;
+                photoUpStat = bPhoto3Info.input_info.input_state;
+                break;
+            case 4:
+                ModUpIndex = 4;
+                photoUpStat = bPhoto4Info.input_info.input_state;
+                break;
+            default:
+                return;
+                break;
+            }
+            break;
+        }
+    }
+
+    // 没配置屯包功能
+    if (user_paras_local.Belt_Number == i) {
+        return;
+    }
+
+
+    // 合流机反控启动
+    if (bCombinerInInfo.input_info.input_state == 1) {
+        if (bCombinerInInfo.input_info.input_trig_mode == INPUT_TRIG_UP) {
+            bCombinerInInfo.input_info.input_trig_mode = INPUT_TRIG_NULL;
+            for (k = user_paras_local.Belt_Number; k > ModUpIndex; k--)
+            {
+                if (((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 6) == 1) ||
+                    ((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 7) == 1) ||
+                    ((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 8) == 1)) {
+                    comm_node_new.rw_flag = 1;
+                    comm_node_new.inverter_no = k;
+                    comm_node_new.speed_gear = g_speed_gear_status;
+                    comm_node_new.comm_interval = user_paras_local.belt_para[k - 1].Link_Start_Time;
+                    comm_node_new.comm_retry = 3;
+                    AddUartSendData2Queue(comm_node_new);
+
+                }
+            }
+            if (combSwitchDown == 0) {
+                combSwitchDown = 1;
+            }
+            combSwitchUp = 0;
+            stockRunStat = INVALUE;
+            photoCurIndex = ModUpIndex;
+            photolastIndex = 0xFFFF;
+            stockFullFlag = 0;
+        }
+        return;
+    }
+
+    // 合流机反控结束
+    if (bCombinerInInfo.input_info.input_state == 0) {
+        if (bCombinerInInfo.input_info.input_trig_mode == INPUT_TRIG_DOWN) {
+            bCombinerInInfo.input_info.input_trig_mode = INPUT_TRIG_NULL;
+
+            for (k = user_paras_local.Belt_Number; k > ModUpIndex; k--)
+            {
+                if (((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 6) == 1) ||
+                    ((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 7) == 1) ||
+                    ((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 8) == 1)) {
+                    comm_node_new.rw_flag = 1;
+                    comm_node_new.inverter_no = k;
+                    comm_node_new.speed_gear = 0;
+                    comm_node_new.comm_interval = user_paras_local.belt_para[k - 1].Link_Stop_Time;
+                    comm_node_new.comm_retry = 3;
+                    AddUartSendData2Queue(comm_node_new);
+                }
+            }
+            if (combSwitchDown == 0) {
+                combSwitchDown = 1;
+            }
+            combSwitchUp = 0;
+            stockRunStat = INVALUE;
+            photoCurIndex = ModUpIndex;
+            photolastIndex = 0xFFFF;
+            stockFullFlag = 0;
+            return;
+        }
+    }
+
+    // 屯包起始光电无信号
+    if (photoUpStat == 0) {
+
+        photoCurIndex = ModUpIndex;
+        photolastIndex = 0xFFFF;
+
+
+        //停止控制合流机 输出低电平
+        if (combSwitchDown > 0) {
+            combSwitchDown--;
+            if (combSwitchDown == 0) {
+                if (((user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Func_Select_Switch >> 8) & 0x1) == 1) {
+                    B_COMBINER_OUT(Bit_RESET);
+                }
+            }
+        }
+
+        //启动合流机 输出高电平
+        if (combSwitchUp > 0) {
+            combSwitchUp--;
+            if (combSwitchUp == 0) {
+                if (((user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Func_Select_Switch >> 8) & 0x1) == 1) {
+                    B_COMBINER_OUT(Bit_SET);
+                }
+            }
+        }
+
+        //合流机不反控  
+        if (bCombinerInInfo.input_info.input_state == 0) {
+            //停止屯包段皮带
+            if (stockRunStat == VALUE) {
+                stockRunStat = INVALUE;
+
+                for (i = user_paras_local.Belt_Number; i > ModUpIndex; i--)
+                {
+                    if ((((user_paras_local.belt_para[i - 1].Func_Select_Switch >> 6) & 0x1) == 1) ||
+                        (((user_paras_local.belt_para[i - 1].Func_Select_Switch >> 7) & 0x1) == 1))
+                    {
+                        comm_node_new.rw_flag = 1;
+                        comm_node_new.inverter_no = i;
+                        comm_node_new.speed_gear = 0;
+                        comm_node_new.comm_interval = user_paras_local.belt_para[i - 1].Link_Stop_Time;
+                        comm_node_new.comm_retry = 3;
+                        AddUartSendData2Queue(comm_node_new);
+
+                        if (combSwitchDown == 0) {
+                            combSwitchDown = user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Link_Stop_Time + 1;
+                        }
+                        combSwitchUp = 0;
+                    }
+                }
+            }
+        }
+    }
+    // 屯包起始光电有信号
+    // 根据光电决定启停
+    //一旦最后一节屯包段满了  停止掉前面的屯包皮带  
+    if (photoUpStat == 1) {
+
+
+        //启动合流机 输出高电平
+        if (combSwitchUp > 0) {
+            combSwitchUp--;
+            if (combSwitchUp == 0) {
+                if (((user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Func_Select_Switch >> 8) & 0x1) == 1) {
+                    B_COMBINER_OUT(Bit_SET);
+                }
+            }
+        }
+        //停止控制合流机 输出低电平
+        if (combSwitchDown > 0) {
+            combSwitchDown--;
+            if (combSwitchDown == 0) {
+                if (((user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Func_Select_Switch >> 8) & 0x1) == 1) {
+                    B_COMBINER_OUT(Bit_RESET);
+                }
+            }
+        }
+
+        //合流机不反控的情况下  
+        if (bCombinerInInfo.input_info.input_state == 0) {
+
+            for (i = photoCurIndex; i < user_paras_local.Belt_Number; i++)
+            {
+                if (((user_paras_local.belt_para[i].Func_Select_Switch >> 6) & 0x1) == 1) {
+                    photoCurStat = logicStockgetCurPhotoState(i, 0);
+
+                    //该段未屯满
+                    if (photoCurStat == 0) {
+                        if (photolastIndex != photoCurIndex) {
+                            photolastIndex = photoCurIndex;
+                            for (j = i + 1; j > photoCurIndex; j--)
+                            {
+                                if ((((user_paras_local.belt_para[j - 1].Func_Select_Switch >> 6) & 0x1) == 1) ||
+                                    (((user_paras_local.belt_para[j - 1].Func_Select_Switch >> 7) & 0x1) == 1)) {
+                                    comm_node_new.rw_flag = 1;
+                                    comm_node_new.inverter_no = j;
+                                    comm_node_new.speed_gear = g_speed_gear_status;
+                                    comm_node_new.comm_interval = user_paras_local.belt_para[j - 1].Link_Start_Time;
+                                    comm_node_new.comm_retry = 3;
+                                    AddUartSendData2Queue(comm_node_new);
+
+                                    stockRunStat = VALUE;
+                                }
+                            }
+                        }
+                        stockFullFlag = 0;
+                        break;
+                    }
+
+                    //该屯包段已经屯满的情况
+                    if (photoCurStat == 1) {
+                        //查找之后的模块是否还屯包( 并且是否屯满包裹 如果不屯包 则应该停止之前的屯包模块
+                        for (j = i + 1; j < user_paras_local.Belt_Number; j++)
+                        {
+
+                            if (((user_paras_local.belt_para[j].Func_Select_Switch >> 6) & 0x1) == 1) {
+                                // 找到没有屯满包裹的模块
+                                photoTmp = logicStockgetCurPhotoState(j, 0);
+
+                                if (photoTmp == 0) {
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (j != user_paras_local.Belt_Number) {
+                            if (photolastIndex != j) {
+                                for (k = j + 1; k > photoCurIndex; k--)
+                                {
+                                    if ((((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 6) & 0x1) == 1) ||
+                                        (((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 7) & 0x1) == 1)) {
+                                        comm_node_new.rw_flag = 1;
+                                        comm_node_new.inverter_no = k;
+                                        comm_node_new.speed_gear = g_speed_gear_status;
+                                        comm_node_new.comm_interval = user_paras_local.belt_para[k - 1].Link_Start_Time;
+                                        comm_node_new.comm_retry = 3;
+                                        AddUartSendData2Queue(comm_node_new);
+
+                                        stockRunStat = VALUE;
+                                    }
+                                }
+                            }
+                            photoCurIndex = j;
+                            photolastIndex = photoCurIndex;
+                            stockFullFlag = 0;
+                            break;
+                        }
+                        if (j == user_paras_local.Belt_Number) {
+                            if (((user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Func_Select_Switch >> 8) & 0x1) == 1) {
+                                photoTmp = logicStockgetCurPhotoState(j, 0);
+                                if (photoTmp == 0) {
+                                    if (photolastIndex != j) {
+                                        for (k = j; k > ModUpIndex; k--)
+                                        {
+                                            if ((((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 6) & 0x1) == 1) ||
+                                                (((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 7) & 0x1) == 1)) {
+                                                comm_node_new.rw_flag = 1;
+                                                comm_node_new.inverter_no = k;
+                                                comm_node_new.speed_gear = g_speed_gear_status;
+                                                comm_node_new.comm_interval = user_paras_local.belt_para[k - 1].Link_Start_Time;
+                                                comm_node_new.comm_retry = 3;
+                                                AddUartSendData2Queue(comm_node_new);
+                                                stockRunStat = VALUE;
+                                            }
+                                        }
+                                    }
+                                    photoCurIndex = j;
+                                    photolastIndex = photoCurIndex;
+                                    if (combSwitchUp == 0) {
+                                        combSwitchUp = user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Link_Start_Time + 1;
+                                    }
+                                    combSwitchDown = 0;
+                                    stockFullFlag = 0;
+                                    break;
+                                }
+                                if (photoTmp == 1) {
+                                    if (stockRunStat == VALUE) {
+                                        for (k = user_paras_local.Belt_Number; k > ModUpIndex; k--)
+                                        {
+                                            if ((((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 6) & 0x1) == 1) ||
+                                                (((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 7) & 0x1) == 1)) {
+                                                comm_node_new.rw_flag = 1;
+                                                comm_node_new.inverter_no = k;
+                                                comm_node_new.speed_gear = 0;
+                                                comm_node_new.comm_interval = user_paras_local.belt_para[k - 1].Link_Stop_Time;
+                                                comm_node_new.comm_retry = 3;
+                                                AddUartSendData2Queue(comm_node_new);
+                                            }
+                                        }
+                                        if (combSwitchDown == 0) {
+                                            combSwitchDown = user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Link_Stop_Time + 1;
+                                        }
+                                        combSwitchUp = 0;
+                                        stockRunStat = INVALUE;
+                                    }
+                                    photoCurIndex = j;
+                                    photolastIndex = photoCurIndex;
+                                    stockFullFlag = 1;
+
+                                    if (stockRunStat == INVALUE) {
+                                        photoCurIndex = ModUpIndex;
+                                        photolastIndex = 0xFFFF;
+                                    }
+                                    break;
+                                }
+                            }
+                            if (((user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Func_Select_Switch >> 8) & 0x1) == 0) {
+                                if (stockRunStat == VALUE) {
+                                    for (k = user_paras_local.Belt_Number; k > ModUpIndex; k--)
+                                    {
+                                        if ((((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 6) & 0x1) == 1) ||
+                                            (((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 7) & 0x1) == 1)) {
+                                            comm_node_new.rw_flag = 1;
+                                            comm_node_new.inverter_no = k;
+                                            comm_node_new.speed_gear = 0;
+                                            comm_node_new.comm_interval = user_paras_local.belt_para[k - 1].Link_Stop_Time;
+                                            comm_node_new.comm_retry = 3;
+                                            AddUartSendData2Queue(comm_node_new);
+                                        }
+                                    }
+                                    if (combSwitchDown == 0) {
+                                        combSwitchDown = user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Link_Stop_Time + 1;
+                                    }
+                                    combSwitchUp = 0;
+                                    stockRunStat = INVALUE;
+                                }
+                                stockFullFlag = 1;
+
+                                if (stockRunStat == INVALUE) {
+                                    photoCurIndex = ModUpIndex;
+                                    photolastIndex = 0xFFFF;
+                                }
+                                break;
+
+                            }
+                        }
+                    }
+                    break;
+                }
+            }
+
+            //无屯包段 但是有跟随的屯包段
+            if (i == user_paras_local.Belt_Number) {
+                if (((user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Func_Select_Switch >> 8) & 0x1) == 1) {
+                    photoTmp = logicStockgetCurPhotoState(i, 0);
+                    if (photoTmp == 0) {
+                        if (photolastIndex != photoCurIndex) {
+                            photolastIndex = photoCurIndex;
+
+                            for (k = i; k > ModUpIndex; k--)
+                            {
+                                if ((((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 6) & 0x1) == 1) ||
+                                    (((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 7) & 0x1) == 1)) {
+                                    comm_node_new.rw_flag = 1;
+                                    comm_node_new.inverter_no = k;
+                                    comm_node_new.speed_gear = g_speed_gear_status;
+                                    comm_node_new.comm_interval = user_paras_local.belt_para[k - 1].Link_Start_Time;
+                                    comm_node_new.comm_retry = 3;
+                                    AddUartSendData2Queue(comm_node_new);
+                                    stockRunStat = VALUE;
+                                }
+                            }
+                            photoCurIndex = i;
+                            photolastIndex = photoCurIndex;
+
+                        }
+                        if (combSwitchUp == 0) {
+                            combSwitchUp = user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Link_Start_Time + 1;
+                        }
+                        combSwitchDown = 0;
+                        stockFullFlag = 0;
+                    }
+
+                    if (photoTmp == 1) {
+                        if (stockRunStat == VALUE) {
+                            for (k = user_paras_local.Belt_Number; k > ModUpIndex; k--)
+                            {
+                                if ((((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 6) & 0x1) == 1) ||
+                                    (((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 7) & 0x1) == 1)) {
+                                    comm_node_new.rw_flag = 1;
+                                    comm_node_new.inverter_no = k;
+                                    comm_node_new.speed_gear = 0;
+                                    comm_node_new.comm_interval = user_paras_local.belt_para[k - 1].Link_Stop_Time;
+                                    comm_node_new.comm_retry = 3;
+                                    AddUartSendData2Queue(comm_node_new);
+                                }
+                            }
+
+                        }
+                        if (combSwitchDown == 0) {
+                            combSwitchDown = user_paras_local.belt_para[user_paras_local.Belt_Number - 1].Link_Stop_Time + 1;
+                        }
+                        stockRunStat = INVALUE;
+                        combSwitchUp = 0;
+                        stockFullFlag = 1;
+
+                        if (stockRunStat == INVALUE) {
+                            photoCurIndex = ModUpIndex;
+                            photolastIndex = 0xFFFF;
+                        }
+
+                    }
+                }
+            }
+
+            //这种方式有逻辑错误
+            //for (k = user_paras_local.Belt_Number; k > ModUpIndex; k--)
+            //{
+            //    if (((user_paras_local.belt_para[k - 1].Func_Select_Switch >> 6) & 0x1) == 1) {
+            //        photoTmp = logicStockgetCurPhotoState(k - 1, 0);
+            //        if (photoTmp == 1) {
+            //            if (combSwitchUp == 0) {
+            //                combSwitchUp = user_paras_local.belt_para[k - 1].Link_Start_Time + 1;
+            //            }
+            //            combSwitchDown = 0;
+            //        }
+            //        if (photoTmp == 0) {
+            //            combSwitchUp = 0;
+            //            if (combSwitchDown == 0) {
+            //                combSwitchDown = user_paras_local.belt_para[k - 1].Link_Stop_Time + 1;
+            //            }
+            //        }
+            //    }
+            //    break;
+            //}
+
+        }
+
+
+    }
 }

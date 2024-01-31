@@ -432,7 +432,8 @@ void main_msone_process(void)
 #if STACK_TYPE
         logicStockProcess();
 #else
-        logicStockProcessTwo();
+//        logicStockProcessTwo();
+        logicStockProcessThree();
 #endif
         //串口逻辑时间计算
         uart_recv_timeout();

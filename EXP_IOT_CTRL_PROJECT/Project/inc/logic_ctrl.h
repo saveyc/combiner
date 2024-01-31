@@ -44,6 +44,7 @@
 
 #define  ONLY_IO            0
 #define  STACK_TYPE         1
+#define  STACK_IO           1
 
 typedef struct {
     u8  input_state;
@@ -213,5 +214,7 @@ void logic_cycle_decrease(void);
 // 屯包过程
 void logicStockProcess(void);
 void logicStockProcessTwo(void);
+//插包过程
+void logicStockProcessThree(void);
 
 #endif
