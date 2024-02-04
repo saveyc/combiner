@@ -68,8 +68,8 @@ typedef struct {
 //#pragma pack ()
 
 #define CAN_PACK_DATA_LEN     8
-#define CAN_TX_BUFF_SIZE      300
-#define CAN_RX_BUFF_SIZE      300
+#define CAN_TX_BUFF_SIZE      400
+#define CAN_RX_BUFF_SIZE      400
 
 
 

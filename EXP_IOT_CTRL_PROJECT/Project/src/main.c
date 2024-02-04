@@ -176,7 +176,7 @@ void sec_process(void)
 
     //ÂÖÑ¯Ñ¯ÎÊ´Ó»ú×´Ì¬
     if (isHost) {
-        if (modulestate_readcnt > 30) {
+        if (modulestate_readcnt > 40) {
             modulestate_readcnt = 0;
             modulestate_index++;
             can_bus_send_msg(buff, 0, CAN_FUNC_ID_READ_MODULE_STATUS, modulestate_index);

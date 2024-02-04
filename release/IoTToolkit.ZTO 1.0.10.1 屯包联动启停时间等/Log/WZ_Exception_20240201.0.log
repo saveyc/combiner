@@ -1,0 +1,638 @@
+2024-02-01 15:51:47,168 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:51:47,172 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:01,742 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:01,742 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:07,315 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:07,315 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:14,567 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:14,567 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:20,906 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:20,906 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:26,600 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:26,600 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:33,908 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:33,908 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:42,322 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:42,322 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:51,697 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:51,697 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:58,803 ERROR [读取参数] Execute
+System.IO.EndOfStreamException: 无法在流的结尾之外进行读取。
+   在 System.IO.BinaryReader.FillBuffer(Int32 numBytes)
+   在 System.IO.BinaryReader.ReadUInt16()
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 50
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:52:58,803 ERROR 读取参数
+System.IO.EndOfStreamException: 无法在流的结尾之外进行读取。
+   在 System.IO.BinaryReader.FillBuffer(Int32 numBytes)
+   在 System.IO.BinaryReader.ReadUInt16()
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 50
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:53:09,612 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:53:09,612 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:53:19,984 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:53:19,984 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:53:43,843 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:53:43,843 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:53:52,924 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:53:52,924 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:54:45,258 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:54:45,258 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:54:50,708 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 15:54:50,708 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 16:09:02,943 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 16:09:02,943 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 16:09:08,541 ERROR [读取参数] Execute
+System.IO.EndOfStreamException: 无法在流的结尾之外进行读取。
+   在 System.IO.BinaryReader.FillBuffer(Int32 numBytes)
+   在 System.IO.BinaryReader.ReadUInt16()
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 50
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 16:09:08,541 ERROR 读取参数
+System.IO.EndOfStreamException: 无法在流的结尾之外进行读取。
+   在 System.IO.BinaryReader.FillBuffer(Int32 numBytes)
+   在 System.IO.BinaryReader.ReadUInt16()
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 50
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:01:10,556 ERROR [读取参数] Execute
+System.IO.EndOfStreamException: 无法在流的结尾之外进行读取。
+   在 System.IO.BinaryReader.FillBuffer(Int32 numBytes)
+   在 System.IO.BinaryReader.ReadUInt16()
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 50
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:01:10,560 ERROR 读取参数
+System.IO.EndOfStreamException: 无法在流的结尾之外进行读取。
+   在 System.IO.BinaryReader.FillBuffer(Int32 numBytes)
+   在 System.IO.BinaryReader.ReadUInt16()
+   在 IoTToolkit.ZTO.IoTParameter..ctor(Byte[] content) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTParameter.ZTO.cs:行号 50
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:01:23,880 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:01:23,880 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:01:28,950 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:01:28,950 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:01:33,358 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:01:33,358 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:01:39,094 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:01:39,094 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:03:59,167 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:03:59,167 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 19:04:40,593 ERROR 'CommunicationFailed' [IoTCommunicator] 10004
+System.Net.Sockets.SocketException (0x80004005): 一个封锁操作被对 WSACancelBlockingCall 的调用中断。
+   在 System.Net.Sockets.Socket.ReceiveFrom(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, EndPoint& remoteEP)
+   在 System.Net.Sockets.Socket.ReceiveFrom(Byte[] buffer, EndPoint& remoteEP)
+   在 Utilities.Network.UDPClient.ReceiveMsg() 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Network\UDPClient.cs:行号 121
+2024-02-01 20:17:23,799 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 20:17:23,799 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 21:15:01,977 ERROR 'CommunicationFailed' [IoTCommunicator] 10004
+System.Net.Sockets.SocketException (0x80004005): 一个封锁操作被对 WSACancelBlockingCall 的调用中断。
+   在 System.Net.Sockets.Socket.ReceiveFrom(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, EndPoint& remoteEP)
+   在 System.Net.Sockets.Socket.ReceiveFrom(Byte[] buffer, EndPoint& remoteEP)
+   在 Utilities.Network.UDPClient.ReceiveMsg() 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Network\UDPClient.cs:行号 121
+2024-02-01 21:26:44,858 ERROR [连接IoT] Execute
+System.Net.Sockets.SocketException (0x80004005): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+   在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 Utilities.Network.UDPClient.Connect(Boolean canReceive) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Network\UDPClient.cs:行号 87
+   在 Utilities.Network.UDPClient.Connect() 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Network\UDPClient.cs:行号 68
+   在 IoTToolkit.IoTCommunicator.Connect() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 66
+   在 IoTToolkit.ZTO.IoTToolkitVM.ConnectCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 138
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 21:26:44,858 ERROR 连接IoT
+System.Net.Sockets.SocketException (0x80004005): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+   在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 Utilities.Network.UDPClient.Connect(Boolean canReceive) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Network\UDPClient.cs:行号 87
+   在 Utilities.Network.UDPClient.Connect() 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Network\UDPClient.cs:行号 68
+   在 IoTToolkit.IoTCommunicator.Connect() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 66
+   在 IoTToolkit.ZTO.IoTToolkitVM.ConnectCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 138
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 21:26:50,962 ERROR [连接IoT] Execute
+System.Net.Sockets.SocketException (0x80004005): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+   在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 Utilities.Network.UDPClient.Connect(Boolean canReceive) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Network\UDPClient.cs:行号 87
+   在 Utilities.Network.UDPClient.Connect() 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Network\UDPClient.cs:行号 68
+   在 IoTToolkit.IoTCommunicator.Connect() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 66
+   在 IoTToolkit.ZTO.IoTToolkitVM.ConnectCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 138
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 21:26:50,962 ERROR 连接IoT
+System.Net.Sockets.SocketException (0x80004005): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+   在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 Utilities.Network.UDPClient.Connect(Boolean canReceive) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Network\UDPClient.cs:行号 87
+   在 Utilities.Network.UDPClient.Connect() 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Network\UDPClient.cs:行号 68
+   在 IoTToolkit.IoTCommunicator.Connect() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 66
+   在 IoTToolkit.ZTO.IoTToolkitVM.ConnectCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 138
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 21:27:08,974 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 21:27:08,974 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 21:27:16,219 ERROR [读取参数] Execute
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141
+2024-02-01 21:27:16,219 ERROR 读取参数
+IoTToolkit.ReplyTimeoutException: 等待回复超时
+   在 IoTToolkit.IoTCommunicator.SendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 291
+   在 IoTToolkit.IoTCommunicator.SequentiallySendCommand(IoTCommand command, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 259
+   在 IoTToolkit.IoTCommunicator.SendCommand(CommandType type, Byte[] data, Int32 retryTimes, Nullable`1 timeout, Boolean throwTimeout) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 244
+   在 IoTToolkit.IoTCommunicator.ReadParameterBytes(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.cs:行号 87
+   在 IoTToolkit.ZTO.IoTCommunicator.ReadParameter(UInt16 stationNo) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTCommunicator.ZTO.cs:行号 49
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameter(UInt16 id) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 195
+   在 IoTToolkit.ZTO.IoTToolkitVM.ReadParameterCmdEx() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 189
+   在 Utilities.Windows.SimpleCommand.ExecuteCore(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 162
+   在 Utilities.Windows.SimpleCommand.Execute(Object parameter) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Windows\SimpleCommand.cs:行号 141

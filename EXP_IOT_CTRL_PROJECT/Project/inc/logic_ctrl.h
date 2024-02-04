@@ -184,6 +184,8 @@ extern u8  polling_num;
 extern u16 stopspeed_default[];
 extern u16 freq_check_cnt;
 
+extern u16 extralAllow;
+
 void read_user_paras(void);
 void write_user_paras(u16* para);
 void InputScanProc();
@@ -216,5 +218,7 @@ void logicStockProcess(void);
 void logicStockProcessTwo(void);
 //²å°ü¹ý³Ì
 void logicStockProcessThree(void);
+
+void Linkage_stream_extrasignal_process(void);
 
 #endif

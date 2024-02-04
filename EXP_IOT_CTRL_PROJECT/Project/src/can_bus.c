@@ -51,10 +51,11 @@ u8 can_bus_send_one_frame(sCanFrameExt sTxMsg)
 
 void para_data_recv_process(u8* pbuf,u16 recv_len)
 {
-    u16 data_len;
+    u16 data_len = 0;
     u8  cmd;
     
-    data_len = pbuf[0]|(pbuf[1]>>8);
+    data_len |= pbuf[0];
+    data_len |= ((pbuf[1])<<8);
     cmd = pbuf[2];
     
     if(data_len != recv_len)
@@ -224,6 +225,7 @@ void can_bus_frame_receive(CanRxMsg rxMsg)
     COMM_NODE_T  comm_node_new;
     u16  index;
     u16 j = 0;
+    u16 k =0;
     
     extID.seg_polo = (rxMsg.ExtId>>20)&0x3;
     extID.seg_num  = (rxMsg.ExtId>>12)&0xFF;
@@ -291,7 +293,10 @@ void can_bus_frame_receive(CanRxMsg rxMsg)
     else if (extID.seg_polo == CAN_SEG_POLO_FIRST)
     {
         memcpy(can_recv_buff, rxMsg.Data, rxMsg.DLC);
-
+        if(extID.func_id == CAN_FUNC_ID_PARA_DATA){
+          k = 0;
+        }
+        
         g_SegPolo = CAN_SEG_POLO_FIRST;
         g_SegNum = extID.seg_num;
         g_SegBytes = rxMsg.DLC;
@@ -392,31 +397,36 @@ void can_bus_send_read_user_paras(u8 station_no)
 void can_bus_reply_read_user_paras(USER_PARAS_T* user_para)
 {
     can_send_len = 3 + sizeof(USER_PARAS_T);
+//    can_send_len = 3 + 200;
     can_send_buff[0] = can_send_len&0xFF;
     can_send_buff[1] = (can_send_len>>8)&0xFF;
     can_send_buff[2] = 0x91;//读参数回复
     memcpy(can_send_buff+3,(u8*)user_para,sizeof(USER_PARAS_T));
-    
+//    memcpy(can_send_buff+3,(u8*)user_para,200);    
     can_bus_send_msg(can_send_buff,can_send_len,CAN_FUNC_ID_PARA_DATA,user_para->Station_No);
 }
 void can_bus_send_write_user_paras(USER_PARAS_T* user_para)
 {
     can_send_len = 3 + sizeof(USER_PARAS_T);
+//    can_send_len = 3 + 200;
     can_send_buff[0] = can_send_len&0xFF;
     can_send_buff[1] = (can_send_len>>8)&0xFF;
     can_send_buff[2] = 0x02;//写参数命令
     memcpy(can_send_buff+3,(u8*)user_para,sizeof(USER_PARAS_T));
+//    memcpy(can_send_buff+3,(u8*)user_para,200);
     
     can_bus_send_msg(can_send_buff,can_send_len,CAN_FUNC_ID_PARA_DATA,user_para->Station_No);
 }
 void can_bus_reply_write_user_paras(USER_PARAS_T* user_para)
 {
     can_send_len = 3 + sizeof(USER_PARAS_T);
+//    can_send_len = 3 + 200;
     can_send_buff[0] = can_send_len&0xFF;
     can_send_buff[1] = (can_send_len>>8)&0xFF;
     can_send_buff[2] = 0x92;//写参数回复
     memcpy(can_send_buff+3,(u8*)user_para,sizeof(USER_PARAS_T));
     
+//    memcpy(can_send_buff+3,(u8*)user_para,200);
     can_bus_send_msg(can_send_buff,can_send_len,CAN_FUNC_ID_PARA_DATA,user_para->Station_No);
 }
 
