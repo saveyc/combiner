@@ -59,6 +59,7 @@ typedef struct {
     u16          button_hold_time; //按钮按住的时间计时(ms)
     u16          trig_cnt;
     u16          blocktrig_flag;       //触发过 用在堵包判断中
+    u16          combine_cnt;            //合流
 }sButton_Info;
 
 #define USER_PARA_DATA_LEN    143

@@ -429,6 +429,8 @@ u8 comm_recv_rw_comand(u8* buf,u16 len)
     u8  i;
     u8  run_status;
     u8  run_status_new;
+    u16  flag = 0;
+    u16  flag_data = 0;
     COMM_NODE_T  comm_node_new;
     
     if(len < 4)
@@ -447,6 +449,8 @@ u8 comm_recv_rw_comand(u8* buf,u16 len)
         {
             data[i] = buf[3+i*2]<<8 | buf[4+i*2];
         }
+        
+        
         
         run_status = (inverter_status_buffer[comm_node.inverter_no-1].fault_code>>4)&0x1;//当前运行状态
         run_status_new = (((data[0]&0xFF)==0x1)?1:0);
@@ -470,9 +474,12 @@ u8 comm_recv_rw_comand(u8* buf,u16 len)
         inverter_status_buffer[comm_node.inverter_no-1].fault_code |= (run_status_new<<4);//运行状态
         inverter_status_buffer[comm_node.inverter_no-1].fault_code |= ((data[1]&0x1)<<3);//编码器状态
         inverter_status_buffer[comm_node.inverter_no-1].fault_code |= ((data[5]&0x1)<<2);//调速完成状态
+        
+        flag = inverter_status_buffer[comm_node.inverter_no - 1].input_status & 0x0002;
+        flag_data = data[6] & 0x0002;
         //本地切换成远程 恢复原来的状态
-        if ((inverter_status_buffer[comm_node.inverter_no - 1].input_status & 0x02) != (data[6] & 0x02)) {
-            if ((data[6] & 0x02) == 1) {
+        if (flag != flag_data) {
+            if (flag_data == 0x0002) {
                 comm_node_new.rw_flag = 1;
                 comm_node_new.inverter_no = comm_node.inverter_no;
                 comm_node_new.speed_gear = logic_upload_lastRunStatus[comm_node.inverter_no - 1];
@@ -481,6 +488,8 @@ u8 comm_recv_rw_comand(u8* buf,u16 len)
                 AddUartSendData2Queue(comm_node_new);
             }
         }
+        inverter_status_buffer[comm_node.inverter_no - 1].input_status &= 0xFFE0;
+        
         inverter_status_buffer[comm_node.inverter_no-1].input_status |= (data[6]&0x1F);
         inverter_status_buffer[comm_node.inverter_no-1].line_speed = data[2];
         inverter_status_buffer[comm_node.inverter_no-1].electric_current = data[3];
@@ -571,8 +580,10 @@ void Modbus_RTU_Comm_Process(void)
             }
             
             comm_node.comm_interval = 2;
+            if(comm_node.rw_flag == 1){
+               logic_upload_lastRunStatus[comm_node.inverter_no - 1] = comm_node.speed_gear;
+            }
 
-            logic_upload_lastRunStatus[comm_node.inverter_no - 1] = comm_node.speed_gear;
 
             comm_busy_flag = 1;
             uart1_commu_state = SEND_READY;

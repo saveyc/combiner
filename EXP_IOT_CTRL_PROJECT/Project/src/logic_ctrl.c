@@ -759,6 +759,7 @@ void InputScanProc()
 
     //处理合流机控制信号(下游)
     bCombinerInInfo.trig_cnt++;
+    bCombinerInInfo.combine_cnt++;
     if (bCombinerInInfo.input_info.input_state != l_bit_combiner_in
         && bCombinerInInfo.input_info.input_confirm_times == 0)
     {
@@ -772,6 +773,7 @@ void InputScanProc()
         {
             bCombinerInInfo.input_info.input_state = bCombinerInInfo.input_info.input_middle_state;
             bCombinerInInfo.input_info.input_confirm_times = 0;
+            bCombinerInInfo.combine_cnt = 0;
             if (bCombinerInInfo.input_info.input_state == 0) {
                 bCombinerInInfo.input_info.input_trig_mode = INPUT_TRIG_DOWN;
             }
@@ -1405,6 +1407,8 @@ void logic_upstream_io_allow_output(void)
 {
     u16 i = 0;
     u16 flag = 0;
+    u16 j = 0;
+
     // 23/12/19 存在屯包的情况
     if (user_paras_local.Belt_Number == 0) {
         return;
@@ -1437,6 +1441,12 @@ void logic_upstream_io_allow_output(void)
                 B_STREAM_OUT_(Bit_RESET);
             }
         }
+
+        if ((bCombinerInInfo.input_info.input_state == 1) && (bCombinerInInfo.combine_cnt >= 4000)) {
+            bCombinerInInfo.combine_cnt = 4000;
+            B_STREAM_OUT_(Bit_SET);
+        }
+        
     }
     else {
         if (((inverter_status_buffer[0].fault_code >> 4) & 0x1) == 1) {
@@ -1447,6 +1457,14 @@ void logic_upstream_io_allow_output(void)
         }
     }
 #endif
+
+
+    for (j = 0; j < user_paras_local.Belt_Number; j++) {
+        if ((((inverter_status_buffer[j].input_status >> 1) & 0x1) == 0) ||
+            (get_inverter_fault_status(inverter_status_buffer[j]) == 1)) {
+            B_STREAM_OUT_(Bit_RESET);
+        }
+    }
 }
 
 // add 23/12/12 屯包逻辑
@@ -2442,7 +2460,7 @@ void logicStockProcessTwo(void)
 }
 
 
-// 屯包过程   其中的一种方式 一段一段屯包
+//插包模式
 void logicStockProcessThree(void)
 {
 
@@ -2494,7 +2512,12 @@ void logicStockProcessThree(void)
         else {
             B_STREAM_OUT_(Bit_RESET);
         }
-    }    
+    }
+
+    if (g_speed_gear_status == 0) {
+        B_STREAM_OUT_(Bit_RESET);
+        return;
+    }
 
     if (g_speed_gear_status == 0) {
 
