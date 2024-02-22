@@ -1,0 +1,51 @@
+2024-02-20 17:15:59,535 ERROR App_DispatcherUnhandledException
+System.Windows.Markup.XamlParseException: “对类型“IoTToolkit.ZTO.IoTToolkitWindow”的构造函数执行符合指定的绑定约束的调用时引发了异常。”，行号为“13”，行位置为“5”。 ---> System.UnauthorizedAccessException: 对路径“C:\WINDOWS\System32\IoTToolkitConfig.xml”的访问被拒绝。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   在 System.IO.File.WriteAllText(String path, String contents)
+   在 Utilities.Configs.ConfigBase.EnsureXmlFileExist(String fileName) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Configs\ConfigBase.cs:行号 463
+   在 Utilities.Configs.ConfigBase.LoadFromFile(String filePath) 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Configs\ConfigBase.cs:行号 233
+   在 Utilities.Configs.ConfigBase.Load() 位置 C:\programming\Wayzim\CommonUtilities\Utilities2\Utilities\Configs\ConfigBase.cs:行号 222
+   在 IoTToolkit.ZTO.IoTToolkitConfig..ctor(String configFile, Boolean loadXML) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.Core\IoTToolkitConfig.ZTO.cs:行号 26
+   在 IoTToolkit.ZTO.IoTToolkitVM..ctor() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitVM.cs:行号 62
+   在 IoTToolkit.ZTO.IoTToolkitWindow..ctor() 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\IoTToolkitWindow.ZTO.xaml.cs:行号 29
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   在 System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   在 System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   在 System.Windows.Application.LoadBamlStreamWithSyncInfo(Stream stream, ParserContext pc)
+   在 System.Windows.Application.LoadComponent(Uri resourceLocator, Boolean bSkipJournaledProperties)
+   在 System.Windows.Application.DoStartup()
+   在 System.Windows.Application.<.ctor>b__1_0(Object unused)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+2024-02-20 17:15:59,573 ERROR App_DispatcherUnhandledException
+System.InvalidOperationException: 无法将 Owner 属性设置为之前未显示的 Window。
+   在 System.Windows.Window.set_Owner(Window value)
+   在 HandyControl.Controls.MessageBox.CreateMessageBox(Window owner, String messageBoxText, String caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult)
+   在 HandyControl.Controls.MessageBox.<>c__DisplayClass44_0.<Show>b__0()
+   在 System.Windows.Threading.Dispatcher.Invoke(Action callback, DispatcherPriority priority, CancellationToken cancellationToken, TimeSpan timeout)
+   在 System.Windows.Threading.Dispatcher.Invoke(Action callback)
+   在 HandyControl.Controls.MessageBox.Show(Window owner, String messageBoxText, String caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult)
+   在 IoTToolkit.ZTO.App.App_DispatcherUnhandledException(Object sender, DispatcherUnhandledExceptionEventArgs e) 位置 C:\programming\Wayzim\CommonUtilities\IoTToolkit\IoTToolkit.ZTO\App.xaml.cs:行号 33
+   在 System.Windows.Threading.Dispatcher.CatchException(Exception e)
+   在 System.Windows.Threading.Dispatcher.CatchExceptionStatic(Object source, Exception e)
+   在 System.Windows.Threading.ExceptionWrapper.CatchException(Object source, Exception e, Delegate catchHandler)
+   在 System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   在 System.Windows.Threading.DispatcherOperation.InvokeImpl()
+   在 System.Windows.Threading.DispatcherOperation.InvokeInSecurityContext(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Windows.Threading.DispatcherOperation.Invoke()
+   在 System.Windows.Threading.Dispatcher.ProcessQueue()
+   在 System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)

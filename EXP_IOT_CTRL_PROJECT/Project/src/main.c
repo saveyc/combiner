@@ -429,12 +429,16 @@ void main_msone_process(void)
         logic_cycle_decrease();
 
         //屯包逻辑
-#if STACK_TYPE
-        logicStockProcess();
-#else
-//        logicStockProcessTwo();
-        logicStockProcessThree();
-#endif
+
+        logicStockInsertProcess();
+
+//#if STACK_TYPE
+//        logicStockProcess();
+//#else
+////        logicStockProcessTwo();
+//        logicInsertProcessOne();
+//#endif
+// 
         //串口逻辑时间计算
         uart_recv_timeout();
         //输入状态查询

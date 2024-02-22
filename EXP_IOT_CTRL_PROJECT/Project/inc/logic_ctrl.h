@@ -7,6 +7,7 @@
 #define  B_EMERGENCYRESET_IN_STATE     IN1_3_STATE   //急停复位信号
 #define  B_DOWN_STOCK_IN_STATE         IN1_4_STATE   //下游屯包光电（主要对接合流机屯包段）
 #define  B_UP_STOCK_IN_STATE           IN1_5_STATE   //上游屯包光电（主要对接上游非IOT控制的屯包段）
+#define  B_SWITCH_IN_STATE             IN1_6_STATE   //屯包插包切换
 
 #define  B_COMBINER_IN_STATE           IN2_6_STATE   //合流机允许输入信号
 
@@ -42,9 +43,19 @@
 #define  BELT_NUMMAX        10
 #define  STOPSTATUS_MAX     2305
 
+//纯IO控制或者通讯控制   1 纯IO控制 0 通讯控制
 #define  ONLY_IO            0
-#define  STACK_TYPE         1
-#define  STACK_IO           1
+// 屯包插包模式切换 1 屯包 0 堵包  暂时用不到
+#define  STACK_TYPE        1
+// 插包时反控合流机伺服段  1 反控   0 不反控
+#define  INSERT_CONT      0  
+
+//add 240220
+#define SHORT_KEEP_TIMEONE   200
+
+
+#define SHORT_TRIG_TIMEONE   500
+
 
 typedef struct {
     u8  input_state;
@@ -56,7 +67,7 @@ typedef struct {
 typedef struct {
     sInput_Info  input_info;
     u16          button_state; //按钮有没有被触发
-    u16          button_hold_time; //按钮按住的时间计时(ms)
+    u32          button_hold_time; //按钮按住的时间计时(ms)
     u16          trig_cnt;
     u16          blocktrig_flag;       //触发过 用在堵包判断中
     u16          combine_cnt;            //合流
@@ -146,6 +157,9 @@ extern sButton_Info  bDownStockInfo;
 //合流机控制信号
 extern sButton_Info  bCombinerInInfo;
 
+//屯包插包切换信号
+extern sButton_Info  bSwitchInInfo;
+
 extern u8  g_remote_start_flag;
 extern u8  g_remote_start_status;
 extern u8  g_remote_speed_status;
@@ -187,6 +201,9 @@ extern u16 freq_check_cnt;
 
 extern u16 extralAllow;
 
+//add 240220  插包模式 或者是屯包模式  1 插包模式 0 屯包模式
+extern u16 stockInsertMod;
+
 void read_user_paras(void);
 void write_user_paras(u16* para);
 void InputScanProc();
@@ -218,7 +235,11 @@ void logic_cycle_decrease(void);
 void logicStockProcess(void);
 void logicStockProcessTwo(void);
 //插包过程
-void logicStockProcessThree(void);
+void logicInsertProcessOne(void);
+
+//插包屯包过程
+void logicStockInsertProcess(void);
+
 
 void Linkage_stream_extrasignal_process(void);
 
