@@ -49,6 +49,7 @@ u8 can_bus_send_one_frame(sCanFrameExt sTxMsg)
     return CAN_Transmit(CAN1,&TxMessage);
 }
 
+
 void para_data_recv_process(u8* pbuf,u16 recv_len)
 {
     u16 data_len = 0;
@@ -87,11 +88,12 @@ void para_data_recv_process(u8* pbuf,u16 recv_len)
         break;
     }
 }
+
 void module_status_recv_process(u8* pbuf,u16 recv_len,u8 src_id)
 {
     MODULE_STATUS_T module_status_t;
-    u16 data_len;
-    u8  belt_num;
+    u16 data_len = 0;
+    u8  belt_num = 0;
     
     data_len = pbuf[0]|(pbuf[1]>>8);
     belt_num = pbuf[2];
@@ -195,11 +197,27 @@ void vcanbus_oneframe_recvCmd(u8* pbuf)
     switch (cmd)
     {
     case CAN_FUNC_ID_START_CMD:
+#if 1
+        if (pbuf[1] != 0) {
+            Reset_Ctrl_Handle();                         //有故障先复位故障 不能复位急停
+            reset_start_time_cnt = 0;
+            //ch 240228 常州快运增加开线时低速保持一段时间
+            Speed_Ctrl_Process(3);
+            setSpeedGear = pbuf[1];
+            startKeepLow = START_KEEP_LOWTIME;
+        }
+        else {
+            Speed_Ctrl_Process(pbuf[1]);
+            startKeepLow = 0;
+        }
+#else
         if (pbuf[1] != 0) {
             Reset_Ctrl_Handle();                         //有故障先复位故障 不能复位急停
             reset_start_time_cnt = 0;
         }
         Speed_Ctrl_Process(pbuf[1]);
+        startKeepLow = 0;
+#endif
         break;
     case CAN_FUNC_ID_RESET_CMD://急停复位
         Reset_Ctrl_Handle();                         //有故障先复位故障
@@ -465,7 +483,7 @@ void can_bus_send_module_status()
     can_send_buff[1] = (can_send_len>>8)&0xFF;
     can_send_buff[2] = user_paras_local.Belt_Number;
     memcpy(can_send_buff+3,(u8*)inverter_status_buffer,sizeof(INVERTER_STATUS_T)*user_paras_local.Belt_Number);
-    //清除 输入触发状态 用于堵包控制
+    //清除 输入触发状态 用于堵包控制 位清除
     inverter_status_buffer[0].input_status &= ~(0x1 << 7);
     can_bus_send_msg(can_send_buff,can_send_len,CAN_FUNC_ID_MODULE_STATUS,local_station);
 }

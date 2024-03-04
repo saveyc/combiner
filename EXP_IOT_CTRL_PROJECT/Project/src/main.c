@@ -155,6 +155,18 @@ void sec_process(void)
         }
         //堵包检测
         Block_Check_Ctrl_Handle();
+        // ch 240228        启动保持一段时间低速运行一般是60s
+        if (startKeepLow != 0) {
+            startKeepLow--;
+            if (startKeepLow == 0) {
+                if (setSpeedGear != 0) {
+                    Reset_Ctrl_Handle();                         //有故障先复位故障 不能复位急停
+                    reset_start_time_cnt = 0;
+                }
+                Speed_Ctrl_Process(setSpeedGear);
+            }
+        }
+
     }
     // 500ms执行一次
     if(half_sec_flag == 1)
@@ -205,6 +217,7 @@ int main(void)
     read_mac_addrs();
     read_user_paras();
     logic_uarttmp_init();
+    Linkage_stream_extrasignal_process();
     /* Infinite loop */
     while (1)
     {
@@ -324,7 +337,7 @@ void Time_Update(void)
 
 }
 
-//  模块自己更新状态信息
+//  模块自己维护更新状态信息
 void main_upload_run_state(void)
 {
     u16 i = 0;
@@ -392,7 +405,6 @@ void main_upload_run_state(void)
                             comm_node_new.comm_retry = 3;
                             AddUartSendData2Queue(comm_node_new);
                         }
-
                     }
                 }
             }

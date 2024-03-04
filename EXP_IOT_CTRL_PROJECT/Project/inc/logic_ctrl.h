@@ -50,11 +50,14 @@
 // 插包时反控合流机伺服段  1 反控   0 不反控
 #define  INSERT_CONT      0  
 
-//add 240220
+//add 240220 皮带保持运动的最小时间
 #define SHORT_KEEP_TIMEONE   200
 
-
+//add 240220 包裹触发光电的时间
 #define SHORT_TRIG_TIMEONE   500
+
+//add 240227  刚启动时保持低速时间
+#define START_KEEP_LOWTIME   60
 
 
 typedef struct {
@@ -182,6 +185,9 @@ extern u8  reset_start_flag;
 // can 接收到的急停信号
 extern u8  g_emergency_stop;
 
+//add 240226  启动时有一段时间保持低速
+extern u16 startKeepLow;
+
 extern USER_PARAS_T  user_paras_local;
 extern USER_PARAS_T  user_paras_slave;
 extern USER_PARAS_T  user_paras_temp;
@@ -203,6 +209,9 @@ extern u16 extralAllow;
 
 //add 240220  插包模式 或者是屯包模式  1 插包模式 0 屯包模式
 extern u16 stockInsertMod;
+
+//add 240226  设置的目标速度
+extern u16 setSpeedGear;
 
 void read_user_paras(void);
 void write_user_paras(u16* para);

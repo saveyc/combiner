@@ -230,6 +230,7 @@ void comm_send_rw_comand()
                 //write_data[1] = 0;
                 //write_data[2] = 0;
 
+                // 停机时发上一次的频率
                 if (belt_para_t.Func_Select_Switch & 0x1)
                 {
                     write_data[0] = 5;//停止
@@ -243,6 +244,20 @@ void comm_send_rw_comand()
                     write_data[1] = 0;
                     write_data[2] = stopspeed_default[comm_node.inverter_no - 1];
                 }
+
+                //停机时发频率0 但是仍然启动
+                //if (belt_para_t.Func_Select_Switch & 0x1)
+                //{
+                //    write_data[0] = 1;//正转运行
+                //    write_data[1] = 0;
+                //    write_data[2] = 0;
+                //}
+                //else
+                //{
+                //    write_data[0] = 1;//正转运行
+                //    write_data[1] = 0;
+                //    write_data[2] = 0;
+                //}
             }
             else if (comm_node.speed_gear == 1)
             {

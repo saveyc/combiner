@@ -75,11 +75,17 @@ u16 logic_upload_lastRunStatus[BELT_NUMMAX] = { 0 };
 // 屯包判断
 u16 stockFullFlag = 0;
 
-//add 240131  直接联动的情况下  启动必须要判断联动信号
+//add 240131  直接联动的情况下  启动必须要判断联动信号   0无直接联动  1 有直接联动
 u16 extralAllow = 1;
 
 //add 240220  插包模式 或者是屯包模式  1 插包模式 0 屯包模式
 u16 stockInsertMod = 0;
+
+//add 240226  启动时有一段时间保持低速
+u16 startKeepLow = 0;
+
+//add 240226  设置的目标速度
+u16 setSpeedGear = 0;
 
 void InitUartSendQueue(void)
 {
@@ -111,7 +117,7 @@ COMM_NODE_T* GetUartSendDataFromQueue(void)
     {
         return NULL;
     }
-    q->front = (q->front + 1) % q->maxSize; // 使队首指针指向下一个位置
+    q->front = (q->front + 1) % (q->maxSize); // 使队首指针指向下一个位置
     return (COMM_NODE_T*)(&(q->queue[q->front])); // 返回队首元素
 }
 u8 IsUartSendQueueFree(void)
@@ -861,6 +867,7 @@ void Speed_Ctrl_Process(u8 speed_gear)
 {
     COMM_NODE_T  comm_node_new;
     u8 i;
+    u8 stockFlag = 0;
     
     //开始屯包时
     for (i = 0; i < user_paras_local.Belt_Number; i++)
@@ -869,6 +876,7 @@ void Speed_Ctrl_Process(u8 speed_gear)
             ((user_paras_local.belt_para[i].Func_Select_Switch >> 7) == 1) ||
             ((user_paras_local.belt_para[i].Func_Select_Switch >> 8) == 1)) {
             bCombinerInInfo.input_info.input_state = 0xFF;
+            stockFlag = 1;
         }
     }
     
@@ -887,7 +895,9 @@ void Speed_Ctrl_Process(u8 speed_gear)
             AddUartSendData2Queue(comm_node_new);
         }
         g_speed_gear_status = 0;
-//        B_RUN_STA_OUT_(Bit_RESET);
+        if (stockFlag == 0) {
+            B_RUN_STA_OUT_(Bit_RESET);
+        }
         return;
     }
     
@@ -902,7 +912,7 @@ void Speed_Ctrl_Process(u8 speed_gear)
                 ((user_paras_local.belt_para[user_paras_local.Belt_Number - i - 1].Func_Select_Switch >> 8) == 1)) {
                 continue;
             }
-            //独立的启动时间
+            
             if (extralAllow == 0) {
                 comm_node_new.rw_flag = 1;
                 comm_node_new.inverter_no = user_paras_local.Belt_Number - i;
@@ -914,7 +924,9 @@ void Speed_Ctrl_Process(u8 speed_gear)
 
         }
         g_speed_gear_status = speed_gear;
-//        B_RUN_STA_OUT_(Bit_SET);
+        if (stockFlag == 0) {
+            B_RUN_STA_OUT_(Bit_SET);
+        }
     }
     else if( speed_gear == 0)//停止
     {
@@ -931,7 +943,9 @@ void Speed_Ctrl_Process(u8 speed_gear)
             AddUartSendData2Queue(comm_node_new);
         }
         g_speed_gear_status = speed_gear;
-//        B_RUN_STA_OUT_(Bit_RESET);
+        if (stockFlag == 0) {
+            B_RUN_STA_OUT_(Bit_RESET);
+        }
     }
     else if((g_speed_gear_status != 0) && (speed_gear != 0))//变速
     {
@@ -954,7 +968,9 @@ void Speed_Ctrl_Process(u8 speed_gear)
 
         }
         g_speed_gear_status = speed_gear;
-//        B_RUN_STA_OUT_(Bit_SET);
+        if (stockFlag == 0) {
+            B_RUN_STA_OUT_(Bit_SET);
+        }
     }
 }
 // 获取光电状态
@@ -1424,8 +1440,8 @@ void Reset_Start_Inverter_Handle(void)
         //if (bStreamInfo.input_info.input_state == 0) {
             for (i = user_paras_local.Belt_Number; i > 0; i--)
             {
-                if ((((inverter_status_buffer[i - 1].fault_code >> 4) & 0x1) == 0))
-                    // && (get_inverter_fault_status(inverter_status_buffer[i-1]) != 1) )//本地皮带停止状态且没有报警
+                if ((((inverter_status_buffer[i - 1].fault_code >> 4) & 0x1) == 0)
+                     && (get_inverter_fault_status(inverter_status_buffer[i-1]) != 1) )//本地皮带停止状态且没有报警
                 {
                     comm_node_new.rw_flag = 1;
                     comm_node_new.inverter_no = i;
@@ -1436,9 +1452,7 @@ void Reset_Start_Inverter_Handle(void)
                 }
             }
         //}  
-    }
-    
-  
+    }  
 }
 
 void read_user_paras(void)
