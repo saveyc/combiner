@@ -94,6 +94,7 @@ void module_status_recv_process(u8* pbuf,u16 recv_len,u8 src_id)
     MODULE_STATUS_T module_status_t;
     u16 data_len = 0;
     u8  belt_num = 0;
+    u16 i = 0;
     
     data_len = pbuf[0]|(pbuf[1]>>8);
     belt_num = pbuf[2];
@@ -105,6 +106,13 @@ void module_status_recv_process(u8* pbuf,u16 recv_len,u8 src_id)
     module_status_t.station_no = src_id;
     module_status_t.belt_number = belt_num;
     memcpy((u8*)module_status_t.inverter_status,(u8*)(pbuf+3),sizeof(INVERTER_STATUS_T)*belt_num);
+
+    if ((module_status_t.station_no > 1) && (module_status_t.station_no < MODULE_NUMSTATE)) {
+        for (i = 0; i < module_status_t.belt_number; i++) {
+            moduleErrt.moduleErr[module_status_t.station_no - 2].moduleerr[i] = module_status_t.inverter_status[i].fault_code;
+            moduleErrt.moduleErr[module_status_t.station_no - 2].inputState[i] = module_status_t.inverter_status[i].input_status;
+        }
+    }
     
     if((isHost == 1) && (module_status_t.station_no != 1))//主站接收从机状态信息
     {

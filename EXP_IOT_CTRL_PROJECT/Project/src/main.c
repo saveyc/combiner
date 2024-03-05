@@ -155,6 +155,7 @@ void sec_process(void)
         }
         //堵包检测
         Block_Check_Ctrl_Handle();
+
         // ch 240228        启动保持一段时间低速运行一般是60s
         if (startKeepLow != 0) {
             startKeepLow--;
@@ -166,6 +167,9 @@ void sec_process(void)
                 Speed_Ctrl_Process(setSpeedGear);
             }
         }
+
+        //add 240304
+        LogicModuleErrOutput();
 
     }
     // 500ms执行一次
@@ -180,9 +184,9 @@ void sec_process(void)
             module_status_t.station_no = 1;
             module_status_t.belt_number = user_paras_local.Belt_Number;
             memcpy((u8*)module_status_t.inverter_status,(u8*)inverter_status_buffer,sizeof(INVERTER_STATUS_T)*user_paras_local.Belt_Number);
-            AddModuleStatusData2Queue(module_status_t);
+//            AddModuleStatusData2Queue(module_status_t);
             //主站也应该将自己的状态发出去
-            can_bus_send_module_status();
+//            can_bus_send_module_status();
         }
     }
 
@@ -218,6 +222,7 @@ int main(void)
     read_user_paras();
     logic_uarttmp_init();
     Linkage_stream_extrasignal_process();
+    LogicModuleErrInit();
     /* Infinite loop */
     while (1)
     {
@@ -244,10 +249,12 @@ int main(void)
             }
         }
         sec_process();
-        Modbus_RTU_Comm_Process();
+        if (isHost == 0) {
+            Modbus_RTU_Comm_Process();
+            logic_upstream_io_allow_output();
+        }
         can_send_frame_process();
         Reset_Start_Inverter_Handle();
-        logic_upstream_io_allow_output();
         main_upload_run_state();
         main_msone_process();
     }
@@ -441,8 +448,10 @@ void main_msone_process(void)
         logic_cycle_decrease();
 
         //屯包逻辑
+        if (isHost == 0) {
+            logicStockInsertProcess();
+        }
 
-        logicStockInsertProcess();
 
 //#if STACK_TYPE
 //        logicStockProcess();

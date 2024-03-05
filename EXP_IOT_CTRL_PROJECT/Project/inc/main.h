@@ -126,12 +126,17 @@ void Delay(uint32_t nCount);
 #define	 LED_ON			GPIO_ResetBits(GPIOD,GPIO_Pin_4)
 #define	 LED_OFF		GPIO_SetBits(GPIOD,GPIO_Pin_4)
 
+#define  BUZZ_STATE     GPIO_ReadOutputDataBit(GPIOE, GPIO_Pin_4)
+#define	 BUZZ_ON	    GPIO_ResetBits(GPIOE, GPIO_Pin_4)
+#define	 BUZZ_OFF		GPIO_SetBits(GPIOE, GPIO_Pin_4)
+
+
 #define	 UART1_RX_485	        GPIO_ResetBits(GPIOA, GPIO_Pin_11);
 #define	 UART1_TX_485	        GPIO_SetBits(GPIOA, GPIO_Pin_11);
 
 #define  SEND_READY             0
-#define	 RECV_DATA		1
-#define	 SEND_DATA		2
+#define	 RECV_DATA		        1
+#define	 SEND_DATA		        2
 #define  SENDING_DATA           3
 #define	 RECV_DATA_END	        4
 

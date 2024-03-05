@@ -59,6 +59,8 @@
 //add 240227  刚启动时保持低速时间
 #define START_KEEP_LOWTIME   60
 
+//add 240304  模块数量
+#define MODULE_NUMSTATE      20        
 
 typedef struct {
     u8  input_state;
@@ -120,6 +122,18 @@ typedef struct {
     u16 belt_number;
     INVERTER_STATUS_T inverter_status[10];
 }MODULE_STATUS_T;
+
+typedef struct {
+    u16 moduleIndex;
+    u16 moduleerr[10];                //
+    u16 inputState[10];
+}sModuleErrStatus;
+
+typedef struct {
+    u16 start_cnt;
+    u16 stop_cnt;
+    sModuleErrStatus moduleErr[MODULE_NUMSTATE];   //模块索引
+}sMODULE_ERR_T;
 
 typedef struct {
     MODULE_STATUS_T *queue; /* 指向存储队列的数组空间 */
@@ -213,6 +227,9 @@ extern u16 stockInsertMod;
 //add 240226  设置的目标速度
 extern u16 setSpeedGear;
 
+//240304
+extern sMODULE_ERR_T   moduleErrt;
+
 void read_user_paras(void);
 void write_user_paras(u16* para);
 void InputScanProc();
@@ -251,5 +268,8 @@ void logicStockInsertProcess(void);
 
 
 void Linkage_stream_extrasignal_process(void);
+
+void LogicModuleErrInit(void);
+void LogicModuleErrOutput(void);
 
 #endif

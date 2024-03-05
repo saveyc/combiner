@@ -87,6 +87,91 @@ u16 startKeepLow = 0;
 //add 240226  设置的目标速度
 u16 setSpeedGear = 0;
 
+//240304
+sMODULE_ERR_T   moduleErrt;
+
+void LogicModuleErrInit(void)
+{   
+    u16 i = 0;
+    u16 j = 0;
+    moduleErrt.start_cnt = 0;
+    moduleErrt.stop_cnt = 0;
+
+    for (i = 0; i < MODULE_NUMSTATE; i++) {
+        for (j = 0; j < 10; j++) {
+            moduleErrt.moduleErr[i].moduleerr[j] = 0;
+            moduleErrt.moduleErr[i].inputState[j] = 0xFFFF;
+        }
+    }
+}
+
+void LogicModuleErrOutput(void)
+{
+    u16 i = 0;
+    u8 blockflag = 0;
+    u8 localflag = 0;
+    u8 errflag = 0;
+    u16 j = 0;
+
+    if (isHost == 0) {
+        return;
+    }
+    if (moduleErrt.start_cnt > 0) {
+        moduleErrt.start_cnt--;
+    }
+    if (moduleErrt.stop_cnt > 0) {
+        moduleErrt.stop_cnt--;
+    }
+
+    if ((g_speed_gear_status == 0) || (g_speed_gear_status == EMERGENCY_STOP)) {
+        B_RUN_1_OUT_(Bit_SET);
+        B_RUN_2_OUT_(Bit_RESET);
+    }
+    else {
+        B_RUN_1_OUT_(Bit_RESET);
+        B_RUN_2_OUT_(Bit_SET);
+    }
+
+
+    for (i = 0; i < MODULE_NUMSTATE; i++) {
+        for (j = 0; j < 10; j++) {
+            if (((moduleErrt.moduleErr[i].moduleerr[j] >> 1) & 0x1) == 1) {
+                blockflag = 1;
+            }
+            if ((moduleErrt.moduleErr[i].moduleerr[j] & 0x1) == 1) {
+                errflag = 1;
+            }
+
+            if (((moduleErrt.moduleErr[i].moduleerr[j] >> 8) & 0xFF) == 1) {
+                errflag = 1;
+            }
+            if (((moduleErrt.moduleErr[i].inputState[j] >> 1) & 0x1) == 0) {
+                localflag = 1;
+            }
+        }
+    }
+    if (errflag == 1) {
+        B_RUN_3_OUT_(Bit_SET);
+    }
+    else {
+        B_RUN_3_OUT_(Bit_RESET);
+    }
+
+    if (blockflag == 1) {
+        B_RUN_4_OUT_(Bit_SET);
+    }
+    else {
+        B_RUN_4_OUT_(Bit_RESET);
+    }
+
+    if (localflag == 1) {
+        B_RUN_5_OUT_(Bit_SET);
+    }
+    else {
+        B_RUN_5_OUT_(Bit_RESET);
+    }
+}
+
 void InitUartSendQueue(void)
 {
     COMM_SEND_QUEUE *q;
@@ -952,12 +1037,20 @@ void Speed_Ctrl_Process(u8 speed_gear)
 
         for(i=0; i<user_paras_local.Belt_Number; i++)
         {
-            if (((user_paras_local.belt_para[user_paras_local.Belt_Number - i - 1].Func_Select_Switch >> 6) == 1) ||
-                ((user_paras_local.belt_para[user_paras_local.Belt_Number - i - 1].Func_Select_Switch >> 7) == 1) ||
-                ((user_paras_local.belt_para[user_paras_local.Belt_Number - i - 1].Func_Select_Switch >> 8) == 1)) {
+            if (((user_paras_local.belt_para[i].Func_Select_Switch >> 6) == 1) ||
+                ((user_paras_local.belt_para[i].Func_Select_Switch >> 7) == 1) ||
+                ((user_paras_local.belt_para[i].Func_Select_Switch >> 8) == 1)) {
                 continue;
             }
             if (extralAllow == 0) {
+                comm_node_new.rw_flag = 1;
+                comm_node_new.inverter_no = i + 1;
+                comm_node_new.speed_gear = speed_gear;
+                comm_node_new.comm_interval = 10;
+                comm_node_new.comm_retry = 3;
+                AddUartSendData2Queue(comm_node_new);
+            }
+            if ((extralAllow == 1) && (((inverter_status_buffer[i].fault_code >> 4) &0x1) == 1)){
                 comm_node_new.rw_flag = 1;
                 comm_node_new.inverter_no = i + 1;
                 comm_node_new.speed_gear = speed_gear;
@@ -1466,7 +1559,7 @@ void read_user_paras(void)
         *((u16*)(&user_paras_local)+3+i) = data;
     }
     user_paras_local.Station_No = local_station;
-    user_paras_local.Version_No_L = 0x0008;
+    user_paras_local.Version_No_L = 0x0009;
     user_paras_local.Version_No_H = 0x0100;
     //参数有效性校验
     if(user_paras_local.Up_Stream_No > 255)
