@@ -15,6 +15,7 @@ enum
     CAN_FUNC_ID_EMERGENCY_STOP_STATUS = 0x7, //急停信号
     CAN_FUNC_ID_UPSTREAM_STOP_CMD = 0x8,     //上游停止信号
     CAN_FUNC_ID_BOARDCAST_CMD = 0x9,         //广播命令集
+    CAN_FUNC_ID_COMBERR_CMD = 0xB,           //合流机故障信息
     CAN_FUNC_ID_BOOT_MODE     = 0xF          // boot 模式
 };
 
@@ -89,5 +90,7 @@ void can_bus_send_func_emergency_cmd(void);
 void can_bus_send_func_upStreamStop_cmd(void);
 
 void vcanbus_oenframe_send(u8* pbuf, u8 type, u16 len);
+
+void vcanbus_comberr_send(void);
 
 #endif

@@ -20,6 +20,8 @@
 #define  B_RESET_IN_STATE      IN2_5_STATE   //复位按钮输入
 #define  B_STREAM_IN_STATE     IN2_6_STATE   //下游准入信号输入
 
+#define  B_COMBERR_IN_STATE    IN3_0_STATE  
+
 #define  B_RUN_1_OUT_(BitVal)   OUT_1_0_(BitVal)   //启动输出1
 #define  B_RUN_2_OUT_(BitVal)   OUT_1_1_(BitVal)   //启动输出2
 #define  B_RUN_3_OUT_(BitVal)   OUT_1_2_(BitVal)   //启动输出3
@@ -125,6 +127,7 @@ typedef struct {
 
 typedef struct {
     u16 moduleIndex;
+    u16 comberr;
     u16 moduleerr[10];                //
     u16 inputState[10];
 }sModuleErrStatus;
@@ -176,6 +179,9 @@ extern sButton_Info  bCombinerInInfo;
 
 //屯包插包切换信号
 extern sButton_Info  bSwitchInInfo;
+
+//合流机报警信号
+extern sButton_Info  bcombErrInfo;
 
 extern u8  g_remote_start_flag;
 extern u8  g_remote_start_status;

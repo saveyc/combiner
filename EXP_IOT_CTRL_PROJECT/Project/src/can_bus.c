@@ -308,6 +308,12 @@ void can_bus_frame_receive(CanRxMsg rxMsg)
         vcanbus_recv_upstreamstop();
 
     }
+    else if ((extID.func_id == CAN_FUNC_ID_COMBERR_CMD) && (isHost == 1))
+    {
+        if ((extID.src_id >= 2) && (extID.src_id <= 20)) {
+            moduleErrt.moduleErr[extID.src_id - 2].comberr = rxMsg.Data[0];
+        }
+    }
 
     //接收多包数据
     if (extID.seg_polo == CAN_SEG_POLO_NONE)
@@ -562,4 +568,17 @@ void vcanbus_oenframe_send(u8* pbuf, u8 type ,u16 len)
 
     can_bus_send_msg(buf, sendlen, CAN_FUNC_ID_BOARDCAST_CMD, local_station);
     can_bus_send_msg(buf, sendlen, CAN_FUNC_ID_BOARDCAST_CMD, local_station);
+}
+
+
+void vcanbus_comberr_send(void)
+{
+    u8 buf[10] = { 0 };
+    u16 sendlen = 0;
+
+    sendlen =  1;
+
+    buf[0] = bcombErrInfo.input_info.input_state;
+
+    can_bus_send_msg(buf, sendlen, CAN_FUNC_ID_COMBERR_CMD, local_station);
 }

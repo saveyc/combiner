@@ -171,6 +171,10 @@ void sec_process(void)
         //add 240304
         LogicModuleErrOutput();
 
+        if (isHost == 0) {
+            vcanbus_comberr_send();
+        }
+
     }
     // 500ms÷¥––“ª¥Œ
     if(half_sec_flag == 1)

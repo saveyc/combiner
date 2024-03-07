@@ -15,6 +15,7 @@ sButton_Info  bStopInfo;
 sButton_Info  bStreamInfo;
 sButton_Info  bEmergencyInfo;
 
+
 //add 23/12/12
 //急停复位信号
 sButton_Info  bEmergencyResetInfo;
@@ -26,6 +27,8 @@ sButton_Info  bDownStockInfo;
 sButton_Info  bCombinerInInfo;
 //屯包插包切换信号
 sButton_Info  bSwitchInInfo;
+//合流机报警信号
+sButton_Info  bcombErrInfo;
 
 INVERTER_STATUS_T  inverter_status_buffer[10];//本机状态
 
@@ -98,6 +101,7 @@ void LogicModuleErrInit(void)
     moduleErrt.stop_cnt = 0;
 
     for (i = 0; i < MODULE_NUMSTATE; i++) {
+        moduleErrt.moduleErr[i].comberr = 0;
         for (j = 0; j < 10; j++) {
             moduleErrt.moduleErr[i].moduleerr[j] = 0;
             moduleErrt.moduleErr[i].inputState[j] = 0xFFFF;
@@ -111,6 +115,7 @@ void LogicModuleErrOutput(void)
     u8 blockflag = 0;
     u8 localflag = 0;
     u8 errflag = 0;
+    u8 combflag = 0;
     u16 j = 0;
 
     if (isHost == 0) {
@@ -134,6 +139,11 @@ void LogicModuleErrOutput(void)
 
 
     for (i = 0; i < MODULE_NUMSTATE; i++) {
+        if (moduleErrt.moduleErr[i].comberr != 0) {
+            combflag = 1;
+        }
+
+
         for (j = 0; j < 10; j++) {
             if (((moduleErrt.moduleErr[i].moduleerr[j] >> 1) & 0x1) == 1) {
                 blockflag = 1;
@@ -150,14 +160,14 @@ void LogicModuleErrOutput(void)
             }
         }
     }
-    if (errflag == 1) {
+    if (combflag == 1) {
         B_RUN_3_OUT_(Bit_SET);
     }
     else {
         B_RUN_3_OUT_(Bit_RESET);
     }
 
-    if (blockflag == 1) {
+    if ((blockflag == 1) || (errflag == 1)) {
         B_RUN_4_OUT_(Bit_SET);
     }
     else {
@@ -350,6 +360,7 @@ void InputScanProc()
     u8 l_bit_downstock_in;
     u8 l_bit_combiner_in;
     u8 l_bit_switch_in; 
+    u8 l_bit_comberr_in;
     
     l_bit_reset_in = B_RESET_IN_STATE;
     l_bit_photo_1_in = B_PHOTO_1_IN_STATE;
@@ -367,7 +378,7 @@ void InputScanProc()
     l_bit_downstock_in = B_DOWN_STOCK_IN_STATE;
     l_bit_combiner_in = B_COMBINER_IN_STATE;
     l_bit_switch_in = B_SWITCH_IN_STATE;
-
+    l_bit_comberr_in = B_COMBERR_IN_STATE;
 
 
 
@@ -941,6 +952,46 @@ void InputScanProc()
     if (bSwitchInInfo.trig_cnt > 2000) {
         bSwitchInInfo.trig_cnt = 0;
         if (bSwitchInInfo.input_info.input_state == 1) {
+        }
+    }
+
+
+    //处理合流机故障信息
+    bcombErrInfo.trig_cnt++;
+    bcombErrInfo.combine_cnt++;
+    if ((bcombErrInfo.input_info.input_state != l_bit_comberr_in)
+        && (bcombErrInfo.input_info.input_confirm_times == 0))
+    {
+        bcombErrInfo.input_info.input_middle_state = l_bit_comberr_in;
+    }
+    if ((bcombErrInfo.input_info.input_middle_state == l_bit_comberr_in)
+        && (bcombErrInfo.input_info.input_middle_state != bcombErrInfo.input_info.input_state))
+    {
+        bcombErrInfo.input_info.input_confirm_times++;
+        if (bcombErrInfo.input_info.input_confirm_times > 20)//消抖时间50ms
+        {
+            bcombErrInfo.input_info.input_state = bcombErrInfo.input_info.input_middle_state;
+            bcombErrInfo.input_info.input_confirm_times = 0;
+            bcombErrInfo.combine_cnt = 0;
+            if (bcombErrInfo.input_info.input_state == 0) {
+                bcombErrInfo.input_info.input_trig_mode = INPUT_TRIG_DOWN;
+            }
+            if (bcombErrInfo.input_info.input_state == 1) {
+                bcombErrInfo.input_info.input_trig_mode = INPUT_TRIG_UP;
+            }
+            if (isHost == 0) {
+                vcanbus_comberr_send();
+            }
+        }
+    }
+    else
+    {
+        bcombErrInfo.input_info.input_middle_state = bcombErrInfo.input_info.input_state;
+        bcombErrInfo.input_info.input_confirm_times = 0;
+    }
+    if (bcombErrInfo.trig_cnt > 2000) {
+        bcombErrInfo.trig_cnt = 0;
+        if (bcombErrInfo.input_info.input_state == 1) {
         }
     }
 
